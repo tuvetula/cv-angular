@@ -14,11 +14,20 @@
 app-navbar {
     width: 25%;
     max-width: 500px;
+    background-color: #427080;
     min-height: 100vh;
     max-height: 100%;
-    background-color: #427080;
 }
 #contentRouterOutlet {
-    width: 75%;
+    width: 100%;
     padding: 15px;
+}
+/* Version Mobile */
+@media screen and (max-width:959px){
+    /* On réduit la app-navbar car elle passe en position absolute  */
+    app-navbar {
+        max-width: 0px;
+        min-height: 0px;
+        max-height: 0px;    
+    }
 }

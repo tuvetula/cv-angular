@@ -20,7 +20,9 @@ img {
     width: 100%;
     padding: 0 10px;
 }
-
+#menuElement {
+    background-color: #427080;
+}
 /* Version tablette */
 @media screen and (max-width:959px){
     #menuElement {
@@ -29,6 +31,7 @@ img {
         width: 50%;
         top: 200px;
         left: calc(0px - 100%);
+        border-bottom-right-radius: 12px;
         transition: left 0.4s linear;
     }
     #menuElement.show {
