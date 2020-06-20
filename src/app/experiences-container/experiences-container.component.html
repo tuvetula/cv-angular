@@ -1,0 +1,49 @@
+<ng-container *ngFor="let item of listExperiences">
+  <article class="p-3">
+    <h4>{{ item.name }}</h4>
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <div class="col-10">
+        <p class="m-0">
+          <span class="company">{{ item.company }}</span> {{ item.city }},
+          {{ item.country }}
+        </p>
+        <p class="date">
+          <ng-container
+            *ngIf="
+              item.startDate.getTime() !== item.endDate.getTime();
+              else elseTemplate
+            "
+          >
+            De
+            {{
+              item.startDate.toLocaleDateString("fr-FR", {
+                month: "long",
+                year: "numeric"
+              }) | titlecase
+            }}
+            à
+            {{
+              item.endDate.toLocaleDateString("fr-FR", {
+                month: "long",
+                year: "numeric"
+              }) | titlecase
+            }}
+          </ng-container>
+          <ng-template #elseTemplate>
+            {{
+              item.startDate.toLocaleDateString("fr-FR", {
+                month: "long",
+                year: "numeric"
+              }) | titlecase
+            }}
+          </ng-template>
+        </p>
+        <ul>
+            <ng-container *ngFor="let desc of item.description">
+            <li>{{ desc }}</li>
+            </ng-container>
+        </ul>
+      </div>
+    </div>
+  </article>
+</ng-container>

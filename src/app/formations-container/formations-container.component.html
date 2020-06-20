@@ -1,0 +1,60 @@
+<ng-container *ngFor="let item of listFormations">
+    <article class="p-3" fxLayout="column nowrap">
+        <h4>{{ item.name }}</h4>
+        <div  fxLayout="row" fxLayoutAlign="start center">
+            <div class="col-10">
+                <p class="m-0">
+                  <span class="company">{{ item.company }}</span> {{ item.city }}, {{
+                    item.country
+                  }}
+                </p>
+                <p class="date">
+                <ng-container *ngIf="item.startDate.getTime() !== item.endDate.getTime(); else elseTemplate">
+                    De
+                    {{
+                      item.startDate.toLocaleDateString("fr-FR", {
+                        month: "long",
+                        year: "numeric"
+                      }) | titlecase
+                    }}
+                à
+                {{
+                  item.endDate.toLocaleDateString("fr-FR", {
+                    month: "long",
+                    year: "numeric"
+                  }) | titlecase
+                }}  
+                </ng-container>
+                <ng-template #elseTemplate>
+                    {{
+                        item.startDate.toLocaleDateString("fr-FR", {
+                          month: "long",
+                          year: "numeric"
+                        }) | titlecase
+                      }}
+                </ng-template>      
+                </p>
+                        <span>{{ item.diplom }}</span>
+            <p>{{ item.description }}</p>
+            </div>
+            <div class="col-2">
+              <ng-container *ngIf="item.diplomImgUrl">
+                  <img
+                    class="diplom"
+                    [src]="item.diplomImgUrl"
+                    id="diplomThumbnail"
+                    (click)="showDiplomModal(item.diplomImgUrl)"
+                  >
+              </ng-container>
+            </div>
+        </div>
+  </article>
+</ng-container>
+
+<!-- Modal diplome -->
+<div #modal id="modal" class="modal" (click)="closeDiplomModal()">
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+  <!-- Modal Content (The Image) -->
+  <img #modalImg class="modal-content" alt="Photo diplôme" />
+</div>

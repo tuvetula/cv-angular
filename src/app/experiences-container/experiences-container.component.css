@@ -1,0 +1,16 @@
+article {
+    border-bottom: solid 1px #7896FF;
+}
+h4 {
+    color: var(--nameColor);
+}
+
+.company {
+    color: var(--companyColor);
+    font-size: large;
+    font-weight: bold;
+}
+.date {
+    font-size: medium;
+    color: var(--dateColor);
+}

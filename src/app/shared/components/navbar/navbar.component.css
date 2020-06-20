@@ -1,0 +1,48 @@
+img {
+    width: 30px;
+}
+.nav-link {
+    color: ivory;
+    width: 100%;
+}
+.nav-link:hover {
+    background-color: #427080;
+    border-radius: 9px;
+}
+.nav-link.active{
+    font-weight: bold;
+}
+
+#burgerMenuDiv {
+    position: absolute;
+    top: 160px;
+    height: 40px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+#menuElement {
+    background-color: #427080;
+    border-bottom-right-radius: 12px;
+}
+/* Version tablette */
+@media screen and (max-width:959px){
+    #menuElement {
+        z-index: 10;
+        position: absolute;
+        width: 50%;
+        top: 200px;
+        left: calc(0px - 100%);
+        transition: left 0.4s linear;
+    }
+    #menuElement.show {
+        left: 0px;
+    }
+}
+/* Version mobile */
+@media screen and (max-width:599px){
+    #menuElement {
+        width: 100%;
+        border-bottom-right-radius: 0px;
+    }
+}

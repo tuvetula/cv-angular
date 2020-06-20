@@ -1,0 +1,32 @@
+<ng-container *ngFor="let item of listCompetences">
+  <div class="competenceRow" fxLayout="row nowrap">
+    <div class="competence" fxLayout="row nowrap" fxLayoutAlign="end center">
+      <span class="competenceName">{{ item.name }}</span>
+    </div>
+    <div class="competence competenceLevel" fxLayout="row nowrap" fxLayoutAlign="start center">
+      <div class="circle" fxLayout="row nowrap" fxLayoutAlign="start center">
+        <div class="circleLeft" [class.circleColored]="item.note > 0"></div>
+        <div class="circleRight" [class.circleColored]="item.note > 10"></div>
+      </div>
+      <div class="circle" fxLayout="row nowrap" fxLayoutAlign="start center">
+        <div class="circleLeft" [class.circleColored]="item.note > 20"></div>
+        <div class="circleRight" [class.circleColored]="item.note > 30"></div>
+      </div>
+      <div class="circle" fxLayout="row nowrap" fxLayoutAlign="start center">
+        <div class="circleLeft" [class.circleColored]="item.note > 40"></div>
+        <div class="circleRight" [class.circleColored]="item.note > 50"></div>
+      </div>
+      <div class="circle" fxLayout="row nowrap" fxLayoutAlign="start center">
+        <div class="circleLeft" [class.circleColored]="item.note > 60"></div>
+        <div class="circleRight" [class.circleColored]="item.note > 70"></div>
+      </div>
+      <div class="circle" fxLayout="row" fxLayoutAlign="start center">
+        <div class="circleLeft" [class.circleColored]="item.note > 80"></div>
+        <div class="circleRight" [class.circleColored]="item.note > 90"></div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<img class="logo" src="../../assets/Pictures/Logos/javascriptLogo.png" alt="Logo javascript" id="JavascriptLogo">
+<img class="logo" src="../../assets/Pictures/Logos/htmlLogo.png" alt="Logo html" id="HtmlLogo">
+<img class="logo" src="../../assets/Pictures/Logos/cssLogo.png" alt="Logo css" id="CssLogo">

@@ -1,0 +1,31 @@
+<!-- BurgerMenu button -->
+<div
+  fxHide.gt-sm
+  fxLayout="row nowrap"
+  fxLayoutAlign="start center"
+  id="burgerMenuDiv"
+>
+  <img
+    src="../../../../assets/Pictures/Logos/menuBurger48.svg"
+    alt="Menu Burger"
+    (click)="displayMenuElement()"
+  />
+</div>
+<!-- Menu -->
+<div fxHide fxShow.gt-sm #menuElement id="menuElement">
+  <ng-container *ngFor="let item of menu">
+    <a
+      class="nav-link"
+      [routerLink]="item.url"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      (click)="displayMenuElement()"
+      fxLayout="row"
+      fxLayoutAlign="start center"
+      fxLayoutGap="15px"
+    >
+      <img [src]="item.icone" alt="icone" />
+      <span>{{ item.name }}</span>
+    </a>
+  </ng-container>
+</div>
