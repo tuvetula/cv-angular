@@ -11,6 +11,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { Page404NotFoundComponent } from './page404-not-found/page404-not-found.component';
 import { ExperiencesContainerComponent } from './experiences-container/experiences-container.component';
 import { CompetencesContainerComponent } from './competences-container/competences-container.component';
+import { ProjetsContainerComponent } from './projets-container/projets-container.component';
+import { LoisirsContainerComponent } from './loisirs-container/loisirs-container.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CompetencesContainerComponent } from './competences-container/competenc
     HomePageComponent,
     Page404NotFoundComponent,
     ExperiencesContainerComponent,
-    CompetencesContainerComponent
+    CompetencesContainerComponent,
+    ProjetsContainerComponent,
+    LoisirsContainerComponent
   ],
   imports: [
     BrowserModule,
