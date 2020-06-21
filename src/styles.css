@@ -5,3 +5,8 @@ body{
     --companyColor: #427080;
     --dateColor: #63A8BF;
 }
+
+@font-face{
+    font-family: molle-italic;
+    src: url(assets/Fonts/Molle-Italic.ttf);
+}
