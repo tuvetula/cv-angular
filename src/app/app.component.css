@@ -15,14 +15,13 @@ h1 , h3{
     width: 100%;
 }
 app-navbar {
-    width: 25%;
-    max-width: 500px;
+    width: 17%;
     background-color: #427080;
     min-height: 100vh;
     max-height: 100%;
 }
 #contentRouterOutlet {
-    width: 75%;
+    width: 83%;
 }
 /* Version Mobile */
 @media screen and (max-width:959px){

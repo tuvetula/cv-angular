@@ -1,4 +1,5 @@
-<ng-container *ngFor="let item of listFormations">
+<div class="p-3">
+  <ng-container *ngFor="let item of listFormations">
     <article class="p-3" fxLayout="column nowrap">
         <h4>{{ item.name }}</h4>
         <div  fxLayout="row" fxLayoutAlign="start center">
@@ -50,6 +51,8 @@
         </div>
   </article>
 </ng-container>
+</div>
+
 
 <!-- Modal diplome -->
 <div #modal id="modal" class="modal" (click)="closeDiplomModal()">

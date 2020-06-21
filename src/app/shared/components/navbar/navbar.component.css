@@ -1,5 +1,6 @@
 img {
     width: 30px;
+    filter: invert(1);
 }
 .nav-link {
     color: ivory;

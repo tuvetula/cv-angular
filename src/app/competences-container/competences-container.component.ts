@@ -25,7 +25,17 @@ export class CompetencesContainerComponent implements OnInit {
           return 0;
         }
       }
-    );
+    ).sort((a,b) => {
+      if(a.note === b.note){
+        if(a.name > b.name){
+          return 1;
+        } else if (a.name < b.name){
+          return -1;
+        } else {
+          return 0;
+        }
+      }
+    });
   }
 
 }

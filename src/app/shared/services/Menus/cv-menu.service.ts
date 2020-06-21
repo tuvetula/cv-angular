@@ -42,7 +42,7 @@ export class CvMenuService {
       {
         name: "Contact",
         url:"/Contact",
-        icone: "../../../../../assets/Pictures/Logos/loisirs32.png"
+        icone: "../../../../../assets/Pictures/Logos/contact32.svg"
       }
     ]
   }

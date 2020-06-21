@@ -48,7 +48,7 @@ span {
     position: relative;
     left: 0;
     opacity: 1;
-    animation: 2s linear entry;
+    animation: 1s linear entry;
 }
 @keyframes entry {
     from {
@@ -63,7 +63,7 @@ span {
 .competenceLevel {
     position: relative;
     right: 0;
-    animation: 2s linear entryRight;
+    animation: 1s linear entryRight;
 }
 @keyframes entryRight {
     from {
@@ -76,143 +76,89 @@ span {
 
 /* Logos */
 .logo {
-  width: 50px;
-}
-#JavascriptLogo{
+  width: 60px;
   position: absolute;
-  top: calc(0px - 50px);
-  left: 30%;
-  transform: rotateY(0deg);
-  animation: javascriptLogo 3s ease-out 0s 1 normal forwards;
-}
-@keyframes javascriptLogo {
-  0% {
-    width: 30px;
-    opacity: 0;
-    top: 0px;
-    transform: rotateY(180deg);
-  }
-  20% {
-    width:70px;
-    opacity: 0.2;
-    top: 250px;
-    transform: rotateY(0deg);
-  }
-  40% {
-    width: 40px;
-    opacity: 0.4;
-    top: 210px;
-    transform: rotateY(180deg);
-  }
-  60% {
-    width: 70px;
-    opacity: 0.6;
-    top: 250px;
-    transform: rotateY(0deg);  }
-  80% {
-    width: 55px;
-    opacity: 0.8;
-    top: 225px;
-    transform: rotateY(180deg);
-  }
-  100% {
-    width: 70px;
-    opacity: 1;
-    top: 250px;
-    transform: rotateY(0deg);
-    transform: rotateZ(315deg);
-  }
+  top: calc(0px - 100px);
 }
 /* LOGO HTML */
 #HtmlLogo {
-  width:60px;
-  position: absolute;
-  top: calc(0px - 50px);
-  left: 35%;
-  transform: rotateY(0deg);
-  animation: htmlLogo 2.5s ease-in-out 0s 1 normal forwards;
+  left: 33%;
+  animation: leftUpLogo 1s ease-in-out 3s 1 normal forwards, rotateClockInverse 0.3s linear 4s 1 normal forwards;
 }
-@keyframes htmlLogo {
-  0% {
-    width: 30px;
-    opacity: 0;
-    top: 0px;
-    transform: rotateY(180deg);
-  }
-  20% {
-    width: 60px;
-    opacity: 0.2;
-    top: 400px;
-    transform: rotateY(0deg);
-  }
-  40% {
-    width: 40px;
-    opacity: 0.4;
-    top: 300px;
-    transform: rotateY(180deg);
-  }
-  60% {
-    width: 60px;
-    opacity: 0.6;
-    top: 400px;
-    transform: rotateY(0deg);  }
-  80% {
-    width: 50px;
-    opacity: 0.8;
-    top: 350px;
-    transform: rotateY(180deg);
-  }
-  100% {
-    width: 60px;
-    opacity: 1;
-    top: 400px;
-    transform: rotateY(0deg);
-    transform: rotateZ(15deg);
-  }
-}
-
 /* LOGO CSS */
 #CssLogo {
-  width:60px;
-  position: absolute;
-  top: 500px;
-  left: 45%;
-  transform: rotateY(0deg);
-  animation: cssLogo 2.5s ease-in-out 0s 1 normal forwards;
+  left: 41%;
+  animation: leftUpLogo 1s ease-in-out 3s 1 normal forwards,rotateClockInverse 0.3s linear 4s 1 normal forwards;
 }
-@keyframes cssLogo {
-  0% {
-    width: 30px;
-    opacity: 0;
-    top: 500px;
+@keyframes leftUpLogo{
+  from {
+    top: 200px;
+  } to {
+    top: 250px;
   }
-  20% {
-    width: 60px;
-    opacity: 0.2;
-    top: 300px;
-    transform: rotateY(180deg);
-  }
-  40% {
-    width: 40px;
-    opacity: 0.4;
+}
+/* BOOTSTRAP LOGO */
+#BootstrapLogo {
+  left: 33%;
+  animation: leftDownLogo 1s ease-in-out 2s 1 normal forwards,rotateClockInverse 0.3s linear 4s 1 normal forwards;
+}
+/* VSCODE LOGO */
+#VsCodeLogo {
+  left: 41%;
+  animation: leftDownLogo 1s ease-in-out 2s 1 normal forwards,rotateClockInverse 0.3s linear 4s 1 normal forwards;
+}
+@keyframes leftDownLogo {
+  from {
+    top: 200px;
+  } to {
     top: 450px;
   }
-  60% {
-    width: 60px;
-    opacity: 0.6;
-    top: 300px;
-    transform: rotateZ(180deg);
+}
+/* RIGHT UP LOGO */
+#JavascriptLogo{
+  left: 80%;
+  animation: rightUpLogo 1s ease-out 3s 1 normal forwards , rotateClock 0.3s linear 4s 1 normal forwards;
+}
+#AngularLogo {
+  left: 90%;
+  animation: rightUpLogo 1s ease-out 3s 1 normal forwards , rotateClock 0.3s linear 4s 1 normal forwards;
+}
+@keyframes rightUpLogo {
+  from {
+    top: 200px;
+  } to {
+    top: 250px;
   }
-  80% {
-    width: 50px;
-    opacity: 0.8;
-    top: 400px;
-    transform: rotateY(180deg);
+}
+/* RIGHT DOWN LOGO */
+#PhpLogo {
+  left: 80%;
+  animation: rightDownLogo 1s ease-out 2s 1 normal forwards , rotateClock 0.3s linear 4s 1 normal forwards;
+}
+#LaravelLogo {
+  left: 90%;
+  animation: rightDownLogo 1s ease-out 2s 1 normal forwards , rotateClock 0.3s linear 4s 1 normal forwards;
+
+}
+@keyframes rightDownLogo {
+  from {
+    top: 200px;
+  } to {
+    top: 450px;
   }
-  100% {
-    width: 60px;
-    opacity: 1;
-    top: 300px;
-    transform: rotateZ(345deg);
+}
+/* ROTATE */
+@keyframes rotateClock {
+  from {
+    transform: rotateZ(0deg);
+  } to {
+    transform: rotateZ(35deg);
+  }
+}
+@keyframes rotateClockInverse {
+  from  {
+    transform: rotateZ(0deg);
+  } to {
+    transform: rotateZ(-25deg);
   }
 }
