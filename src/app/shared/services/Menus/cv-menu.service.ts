@@ -38,6 +38,11 @@ export class CvMenuService {
         name: "Loisirs",
         url: "/Loisirs",
         icone: "../../../../../assets/Pictures/Logos/loisirs32.png"
+      },
+      {
+        name: "Contact",
+        url:"/Contact",
+        icone: "../../../../../assets/Pictures/Logos/loisirs32.png"
       }
     ]
   }

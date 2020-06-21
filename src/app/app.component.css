@@ -1,3 +1,6 @@
+h1 , h3{
+    font-family: molle-italic;
+}
 #topBackground {
     height: 200px;
 }
@@ -19,8 +22,7 @@ app-navbar {
     max-height: 100%;
 }
 #contentRouterOutlet {
-    width: 100%;
-    padding: 15px;
+    width: 75%;
 }
 /* Version Mobile */
 @media screen and (max-width:959px){
@@ -29,5 +31,9 @@ app-navbar {
         max-width: 0px;
         min-height: 0px;
         max-height: 0px;    
+    }
+    #contentRouterOutlet {
+        width: 100%;
+        padding: 5px;
     }
 }

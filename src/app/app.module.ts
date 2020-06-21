@@ -13,6 +13,7 @@ import { ExperiencesContainerComponent } from './experiences-container/experienc
 import { CompetencesContainerComponent } from './competences-container/competences-container.component';
 import { ProjetsContainerComponent } from './projets-container/projets-container.component';
 import { LoisirsContainerComponent } from './loisirs-container/loisirs-container.component';
+import { ContactContainerComponent } from './contact-container/contact-container.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LoisirsContainerComponent } from './loisirs-container/loisirs-container
     ExperiencesContainerComponent,
     CompetencesContainerComponent,
     ProjetsContainerComponent,
-    LoisirsContainerComponent
+    LoisirsContainerComponent,
+    ContactContainerComponent
   ],
   imports: [
     BrowserModule,

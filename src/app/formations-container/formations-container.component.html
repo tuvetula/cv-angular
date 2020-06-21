@@ -2,7 +2,7 @@
     <article class="p-3" fxLayout="column nowrap">
         <h4>{{ item.name }}</h4>
         <div  fxLayout="row" fxLayoutAlign="start center">
-            <div class="col-10">
+            <div class="col-8 col-md-10">
                 <p class="m-0">
                   <span class="company">{{ item.company }}</span> {{ item.city }}, {{
                     item.country
@@ -37,7 +37,7 @@
                         <span>{{ item.diplom }}</span>
             <p>{{ item.description }}</p>
             </div>
-            <div class="col-2">
+            <div class="col-4 col-md-2">
               <ng-container *ngIf="item.diplomImgUrl">
                   <img
                     class="diplom"

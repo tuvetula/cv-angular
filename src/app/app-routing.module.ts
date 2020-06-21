@@ -7,6 +7,7 @@ import { ExperiencesContainerComponent } from './experiences-container/experienc
 import { CompetencesContainerComponent } from './competences-container/competences-container.component';
 import { ProjetsContainerComponent } from './projets-container/projets-container.component';
 import { LoisirsContainerComponent } from './loisirs-container/loisirs-container.component';
+import { ContactContainerComponent } from './contact-container/contact-container.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: "Competences" , component: CompetencesContainerComponent},
   { path: "Projets" , component: ProjetsContainerComponent},
   { path: "Loisirs" , component: LoisirsContainerComponent},
+  { path: "Contact" , component: ContactContainerComponent},
   { path: "" , component: HomePageComponent, pathMatch:"full"},
   { path: "**" , component: Page404NotFoundComponent}
 ];
