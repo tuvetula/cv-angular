@@ -14,6 +14,11 @@ img {
 }
 .nav-link.active{
     font-weight: bold;
+    background-color: #FFF56B;
+    color: #213840;
+}
+.nav-link.active > .imgIcone{
+    filter: invert(0);
 }
 
 #burgerMenuDiv {
