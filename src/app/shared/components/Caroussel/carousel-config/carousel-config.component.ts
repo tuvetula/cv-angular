@@ -27,13 +27,10 @@ export class CarouselConfigComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('init');
     if(this.images && this.images.length < 2 && this.config){
-      console.log('change1');
       this.config.showNavigationArrows = false;
       this.config.showNavigationIndicators = false;      
     } else {
-      console.log('change2');
       this.config.showNavigationArrows = true;
       this.config.showNavigationIndicators = true;
     }
@@ -50,8 +47,6 @@ export class CarouselConfigComponent implements OnInit {
   }
 
   onSlide(slideEvent: NgbSlideEvent) {
-    console.log(slideEvent);
-    
     if (this.unpauseOnArrow && slideEvent.paused &&
       (slideEvent.source === NgbSlideEventSource.ARROW_LEFT || slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)) {
       this.togglePaused();
