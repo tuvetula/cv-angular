@@ -1,0 +1,52 @@
+/* Bouton pour remonter en haut de page */
+svg.back-to-top {
+  visibility: hidden;
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+}
+/* Version Mobile */
+@media screen and (max-width:959px){
+  svg.back-to-top {
+    width:40px;
+    height: 40px;
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+/* ANIMATIONS */
+svg.fadeIn {
+  animation: fadeIn 1s;
+  animation-fill-mode: forwards;
+}
+
+svg.fadeOut {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

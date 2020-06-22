@@ -16,20 +16,22 @@ import { LoisirsContainerComponent } from './loisirs-container/loisirs-container
 import { ContactContainerComponent } from './contact-container/contact-container.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselConfigComponent } from './shared/components/Caroussel/carousel-config/carousel-config.component';
+import { ScrollUpButtonComponent } from './shared/components/scroll-up-button/scroll-up-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FormationsContainerComponent,
     HomePageComponent,
     Page404NotFoundComponent,
+    FormationsContainerComponent,
     ExperiencesContainerComponent,
     CompetencesContainerComponent,
     ProjetsContainerComponent,
     LoisirsContainerComponent,
     ContactContainerComponent,
-    CarouselConfigComponent
+    CarouselConfigComponent,
+    ScrollUpButtonComponent
   ],
   imports: [
     BrowserModule,
