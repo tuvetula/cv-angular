@@ -9,7 +9,7 @@ export class ProjetsService {
     this.listProjets = [
       {
         name: 'As de la coloc',
-        date: new Date(2019, 10),
+        date: new Date(2019, 9),
         company: 'As creation',
         url: 'https://www.app.asdelacoloc.fr',
         gitLink: 'https://github.com/tuvetula/AsDeLaColocation',
@@ -66,8 +66,8 @@ export class ProjetsService {
           '../../../../../assets/Pictures/IllustrationProjets/BlogLaravel/LaravelBlog1.png',
           '../../../../../assets/Pictures/IllustrationProjets/BlogLaravel/LaravelBlog2.png',
         ],
-        langagesFrontEnd: ['php', 'Laravel'],
-        langagesBackEnd: ['Laravel'],
+        langagesFrontEnd: ['Html','Css','Bootstrap'],
+        langagesBackEnd: ['Php','Laravel'],
         documentationPath: null,
       },
     ];
