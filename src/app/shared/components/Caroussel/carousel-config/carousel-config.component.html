@@ -1,0 +1,9 @@
+<ngb-carousel *ngIf="images" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+  <ng-container *ngFor="let item of images; let i = index">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper" fxLayout="row" fxLayoutAlign="center center">
+        <img class="imgCarousel" [src]="item" alt="slide {{ i + 1 }}" />
+      </div>
+    </ng-template>
+  </ng-container>
+</ngb-carousel>

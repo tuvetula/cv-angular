@@ -3,8 +3,15 @@
     src="../assets/Pictures/Background/network.jpg"
     alt="background picture"
   />
-  <h1>Marcant Romain</h1>
-  <h3>Développeur web</h3>
+  <div class="style100" fxLayout="row" fxLayoutAlign="start center">
+    <div class="style50" fxLayout="row" fxLayoutAlign="end center">
+      <h1 id="name">Marcant</h1>
+    </div>
+    <div class="style50" fxLayout="row" fxLayoutAlign="start center">
+      <h1 id="firstName">Romain</h1>
+    </div>
+  </div>
+  <h3 id="title">Développeur web</h3>
 </div>
 <div fxLayout="column nowrap" fxLayout.gt-sm="row nowrap" id="contentDiv">
   <app-navbar></app-navbar>

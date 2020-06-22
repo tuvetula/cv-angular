@@ -14,6 +14,8 @@ import { CompetencesContainerComponent } from './competences-container/competenc
 import { ProjetsContainerComponent } from './projets-container/projets-container.component';
 import { LoisirsContainerComponent } from './loisirs-container/loisirs-container.component';
 import { ContactContainerComponent } from './contact-container/contact-container.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselConfigComponent } from './shared/components/Caroussel/carousel-config/carousel-config.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,15 @@ import { ContactContainerComponent } from './contact-container/contact-container
     CompetencesContainerComponent,
     ProjetsContainerComponent,
     LoisirsContainerComponent,
-    ContactContainerComponent
+    ContactContainerComponent,
+    CarouselConfigComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     FlexLayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

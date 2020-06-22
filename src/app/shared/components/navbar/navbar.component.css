@@ -1,5 +1,7 @@
 img {
     width: 30px;
+}
+.imgIcone {
     filter: invert(1);
 }
 .nav-link {

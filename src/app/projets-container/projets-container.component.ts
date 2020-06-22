@@ -11,7 +11,9 @@ import { ProjetModel } from '../shared/Models/list-projets.model'
 export class ProjetsContainerComponent implements OnInit {
   public listProjets: ProjetModel[];
   @ViewChild('modal') modal: ElementRef;
-  @ViewChild('modalImg') modalImg: ElementRef;
+
+  public imagePathToShowInCarousel: string[];
+  public showCarousel: boolean;
 
   constructor(
     private projetsService: ProjetsService
@@ -28,15 +30,18 @@ export class ProjetsContainerComponent implements OnInit {
           return 0;
         }
       }
-    )
+    );
+    this.showCarousel = false;
   }
 
-  public showImagePathModal(imagePath: string):void{
+  public showImagePathModal(imagePath: string[]):void{
+    this.imagePathToShowInCarousel = imagePath;
+    this.showCarousel = true;
     this.modal.nativeElement.style.display="block";
-    this.modalImg.nativeElement.src=imagePath;
   }
 
   public closeImagePathModal(): void {
+    this.showCarousel = false;
     this.modal.nativeElement.style.display="none";
   }
 

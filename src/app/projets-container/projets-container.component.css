@@ -1,15 +1,12 @@
-#container {
-    padding: 16px;
-}
 article {
     padding: 16px;
     border-bottom: solid 1px #7896FF;
 }
-#container article:last-of-type {
+article:last-of-type {
     border-bottom: none;
     padding-bottom: 0px;
 }
-#container article:first-of-type {
+article:first-of-type {
     padding-top: 0px;
 }
 h4 {
@@ -36,13 +33,9 @@ h4 {
 }
 /* VERSION MOBILE */
 @media screen and (max-width: 959px){
-    #container {
-        padding: 8px;
-    }
     article {
         padding: 16px 0px;
     }
-
     .imagePath {
         width: 40px;
         max-height: 40px;

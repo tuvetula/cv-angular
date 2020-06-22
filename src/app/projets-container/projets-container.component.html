@@ -1,71 +1,73 @@
-<div id="container">
-  <ng-container *ngFor="let item of listProjets">
-    <article fxLayout="column nowrap" fxLayoutGap="16px">
-      <h3>{{ item.name }}</h3>
-      <section fxLayout="column" fxLayoutAlign="center start">
-        <p class="m-0">
-          <span class="company">{{ item.company }}</span> {{ item.city }},
-          {{ item.country }}
-        </p>
-        <p class="date">
-          {{
-            item.date.toLocaleDateString("fr-FR", {
-              month: "long",
-              year: "numeric"
-            }) | titlecase
-          }}
-        </p>
-        <p>{{ item.description }}</p>
-      </section>
-      <section fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="20px">
-        <ul>
-          <ng-container *ngFor="let langage of item.langagesFrontEnd">
-            <li>{{ langage }}</li>
-          </ng-container>
-        </ul>
-        <ul>
-          <ng-container *ngFor="let langage of item.langagesBackEnd">
-            <li>{{ langage }}</li>
-          </ng-container>
-        </ul>
-      </section>
-      <section
-        fxLayout="row nowrap"
-        fxLayoutAlign="center center"
-        fxLayoutGap="15px"
-      >
-        <div *ngIf="item.url">
-          <a [href]="item.url" target="_Blank"
-            ><img
-              class="imgLink"
-              src="../../assets/Pictures/Logos/website48.svg"
-              alt="Lien site web"
-          /></a>
-        </div>
-        <div *ngIf="item.gitLink">
-          <a [href]="item.gitLink" target="_Blank"
-            ><img
-              class="imgLink"
-              src="../../assets/Pictures/Logos/github.svg"
-              alt="Lien github"
-          /></a>
-        </div>
-        <ng-container *ngIf="item.imagePath">
-          <img
-            class="imagePath"
-            [src]="item.imagePath[0]"
-            (click)="showImagePathModal(item.imagePath[0])"
-          />
-        </ng-container>
+<ng-container *ngFor="let item of listProjets">
+  <article fxLayout="column nowrap" fxLayoutGap="16px">
+    <h4>{{ item.name }}</h4>
+    <section fxLayout="column" fxLayoutAlign="center start">
+      <p class="m-0">
+        <span class="company">{{ item.company }}</span> {{ item.city }},
+        {{ item.country }}
+      </p>
+      <p class="date">
+        {{
+          item.date.toLocaleDateString("fr-FR", {
+            month: "long",
+            year: "numeric"
+          }) | titlecase
+        }}
+      </p>
+      <p>{{ item.description }}</p>
     </section>
-    </article>
-  </ng-container>
-</div>
+    <section fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="20px">
+      <ul>
+        <ng-container *ngFor="let langage of item.langagesFrontEnd">
+          <li>{{ langage }}</li>
+        </ng-container>
+      </ul>
+      <ul>
+        <ng-container *ngFor="let langage of item.langagesBackEnd">
+          <li>{{ langage }}</li>
+        </ng-container>
+      </ul>
+    </section>
+    <section
+      fxLayout="row nowrap"
+      fxLayoutAlign="center center"
+      fxLayoutGap="15px"
+    >
+      <div *ngIf="item.url">
+        <a [href]="item.url" target="_Blank"
+          ><img
+            class="imgLink"
+            src="../../assets/Pictures/Logos/website48.svg"
+            alt="Lien site web"
+        /></a>
+      </div>
+      <div *ngIf="item.gitLink">
+        <a [href]="item.gitLink" target="_Blank"
+          ><img
+            class="imgLink"
+            src="../../assets/Pictures/Logos/github.svg"
+            alt="Lien github"
+        /></a>
+      </div>
+      <ng-container *ngIf="item.imagePath">
+        <img
+          class="imagePath"
+          [src]="item.imagePath[0]"
+          (click)="showImagePathModal(item.imagePath)"
+        />
+      </ng-container>
+    </section>
+  </article>
+</ng-container>
 
 <!-- Modal diplome -->
-<div #modal id="modal" class="modal" (click)="closeImagePathModal()">
+<div #modal id="modal" class="modal">
   <!-- The Close Button -->
-  <span class="close">&times;</span>
+  <span class="close" (click)="closeImagePathModal()">&times;</span>
   <!-- Modal Content (The Image) -->
-  <img #modalImg class="modal-content" alt="Photo illustratio " />
+  <ng-container *ngIf="showCarousel">
+    <app-carousel-config
+      [images]="imagePathToShowInCarousel"
+    ></app-carousel-config>
+  </ng-container>
 </div>
