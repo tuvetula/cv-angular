@@ -26,7 +26,7 @@ export class ProjetsService {
         date: new Date(2020, 4),
         company: 'Projet personnel',
         url: 'https://coursjs-e9340.web.app/',
-        gitLink: null,
+        gitLink: "https://github.com/tuvetula/Jeux/tree/master/Morpion",
         description:
           "Site regroupant les différents cours que j'ai suivi via la plateforme 'Dyma.fr' me permettant de me familiariser avec Angular et de me créer un support auquel me référencer.",
         imagePath: ['../../../../../assets/Pictures/IllustrationProjets/CoursJs/CoursJs.PNG'],
