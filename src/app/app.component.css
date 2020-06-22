@@ -25,9 +25,9 @@ h1 , h3{
 #name {
     position: relative;
     visibility: hidden;
-    animation: entryLeft 1.5s ease-in-out 0.5s 1 normal forwards;
+    animation: nameEntryLeft 1.5s ease-in-out 0.5s 1 normal forwards;
 }
-@keyframes entryLeft {
+@keyframes nameEntryLeft {
     from {
         visibility: hidden;
         left: calc(0px - 120%);
@@ -39,9 +39,9 @@ h1 , h3{
 #firstName {
     position: relative;
     visibility: hidden;
-    animation: entryRight 1.5s ease-in-out 0.5s 1 normal forwards;
+    animation: firstNameEntryRight 1.5s ease-in-out 0.5s 1 normal forwards;
 }
-@keyframes entryRight {
+@keyframes firstNameEntryRight {
     from {
         visibility: hidden;
         left: calc(0px + 120%);
@@ -109,7 +109,7 @@ app-navbar {
 }
 #contentRouterOutlet {
     width: 80%;
-    padding: 16px;
+    padding: 24px;
 }
 /* Version Tablette */
 @media screen and (max-width:959px){
@@ -121,7 +121,7 @@ app-navbar {
     }
     #contentRouterOutlet {
         width: 100%;
-        padding: 8px;
+        padding: 16px;
     }
 }
 /* Version Mobile */
