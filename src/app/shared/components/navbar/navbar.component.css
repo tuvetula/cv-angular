@@ -35,10 +35,13 @@ img {
         top: 200px;
         left: calc(0px - 100%);
         border-bottom-right-radius: 12px;
-        transition: left 0.4s linear;
+        transition: left 0.3s ease-out;
     }
     #menuElement.show {
         left: 0px;
+    }
+    .nav-link:hover {
+        background-color: transparent;
     }
 }
 /* Version mobile */
