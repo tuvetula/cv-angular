@@ -8,7 +8,8 @@ import {
 import { CvMenuService } from '../../services/Menus/cv-menu.service';
 import { CvMenuModel } from '../../Models/cv-menu.model';
 import { ScreenSizeService } from '../../services/utilities/screen-size.service';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
+import { MenuSelectedNameService } from '../../services/Observables/menu-selected-name.service';
 
 @Component({
   selector: 'app-navbar',
@@ -20,13 +21,16 @@ export class NavbarComponent implements OnInit, OnDestroy {
   public menu: CvMenuModel[];
   private windowInnerWidth: number;
   @ViewChild('menuElement') menuElement: ElementRef;
+  public menuSelectedTitle: Observable<string>;
 
   constructor(
     private cvMenuService: CvMenuService,
-    private screenSizeService: ScreenSizeService
+    private screenSizeService: ScreenSizeService,
+    private menuSelectedNameService: MenuSelectedNameService
   ) {}
 
   ngOnInit(): void {
+    this.menuSelectedTitle = this.menuSelectedNameService.menuSelectedName;
     this.menu = this.cvMenuService.cvMenu;
     this.screenSizeSubscription = this.screenSizeService.windowInnerWidth.subscribe(
       (value) => (this.windowInnerWidth = value)

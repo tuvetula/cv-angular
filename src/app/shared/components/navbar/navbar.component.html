@@ -2,7 +2,8 @@
 <div
   fxHide.gt-sm
   fxLayout="row nowrap"
-  fxLayoutAlign="start center"
+  fxLayoutAlign="space-between center"
+  fxLayoutGap="10px"
   id="burgerMenuDiv"
 >
   <img
@@ -10,7 +11,12 @@
     alt="Menu Burger"
     (click)="displayMenuElement()"
   />
+  <div id="menuSelectedName" fxLayout="row" fxLayoutAlign="center center">
+    {{ menuSelectedTitle | async }}
+  </div>
 </div>
+<!-- barre affichage section selectionné (Version Mobile)-->
+
 <!-- Menu -->
 <div fxHide fxShow.gt-sm #menuElement id="menuElement">
   <ng-container *ngFor="let item of menu">

@@ -28,6 +28,13 @@ img {
     width: 100%;
     padding: 0 10px;
 }
+#menuSelectedName {
+    width: 100%;
+    border: solid 2px #427080;
+    border-radius: 12px;
+    font-weight: bold;
+    background-color: #FFF56B;
+}
 #menuElement {
     background-color: #427080;
 }
