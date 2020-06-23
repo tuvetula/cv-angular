@@ -1,13 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    height: 100%;
-    --nameColor: #213840;
-    --companyColor: #427080;
-    --dateColor: #63A8BF;
-    --yellowColor: #FFF56B;
+body {
+  height: 100%;
+  --nameColor: #213840;
+  --companyColor: #427080;
+  --dateColor: #63a8bf;
+  --yellowColor: #fff56b;
 }
 
-@font-face{
-    font-family: molle-italic;
-    src: url(assets/Fonts/Molle-Italic.ttf);
+@font-face {
+  font-family: molle-italic;
+  src: url(assets/Fonts/Molle-Italic.ttf);
+}
+
+li {
+  margin-bottom: 15px;
+}
+li:last-of-type {
+    margin-bottom: 0px;
+}
+article {
+  padding: 16px;
+  border-bottom: solid 1px #7896ff;
+}
+article:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0px;
+}
+article:first-of-type {
+  padding-top: 0px;
+}
+
+@media screen and (max-width: 959px){
+  article {
+      padding: 16px 0px;
+  }
 }

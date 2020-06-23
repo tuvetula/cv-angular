@@ -1,16 +1,5 @@
-article {
-  padding: 16px;
-  border-bottom: solid 1px #7896FF;
-}
-article:last-of-type {
-  border-bottom: none;
-  padding-bottom: 0px;
-}
-article:first-of-type {
-  padding-top: 0px;
-}
 h4 {
-    color: var(--nameColor);
+  color: var(--nameColor);
 }
 .company {
     color: var(--companyColor);
