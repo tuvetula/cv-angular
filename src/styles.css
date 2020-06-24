@@ -6,6 +6,8 @@ body {
   --dateColor: #63a8bf;
   --yellowColor: #fff56b;
   --borderBottom: solid 1px #7896ff;
+  --heightSizeTopbar: 190px;
+  --heightSizeTopBarMobile: 166px;
 }
 
 @font-face {

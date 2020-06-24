@@ -1,21 +1,7 @@
-<div id="topBackground" fxLayout="column nowrap" fxLayoutAlign="center center">
-  <img
-    src="../assets/Pictures/Background/network.jpg"
-    alt="background picture"
-  />
-  <div class="style100" fxLayout="row" fxLayoutAlign="start center">
-    <div class="style50" fxLayout="row" fxLayoutAlign="end center">
-      <h1 id="name">Marcant</h1>
-    </div>
-    <div class="style50" fxLayout="row" fxLayoutAlign="start center">
-      <h1 id="firstName">Romain</h1>
-    </div>
-  </div>
-  <h3 id="title">Développeur web</h3>
-</div>
-<div fxLayout="column nowrap" fxLayout.gt-sm="row nowrap" id="contentDiv">
-  <app-navbar></app-navbar>
-  <div id="contentRouterOutlet">
+<app-topbar-background></app-topbar-background>
+<div fxLayout="column nowrap" fxLayout.gt-sm="row nowrap">
+  <app-navbar fxFlex.gt-sm="20"></app-navbar>
+  <div id="contentRouterOutlet" fxFlex.gt-sm="80">
     <router-outlet></router-outlet>
   </div>
 </div>

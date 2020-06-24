@@ -1,0 +1,111 @@
+h1 , h3{
+    font-family: molle-italic;
+    text-shadow: #daf6ff 2px 2px;
+}
+#topBar {
+    height: var(--heightSizeTopbar);
+}
+#topBar img {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+    width: 100%;
+    height: var(--heightSizeTopbar);
+}
+.width100 {
+    width: 100%;
+}
+#name {
+    position: relative;
+    visibility: hidden;
+    animation: nameEntryLeft 1.5s ease-in-out 0.5s 1 normal forwards;
+}
+@keyframes nameEntryLeft {
+    from {
+        visibility: hidden;
+        left: calc(0px - 120%);
+    } to {
+        visibility: visible;
+        left: 0px;
+    }
+}
+#firstName {
+    position: relative;
+    visibility: hidden;
+    animation: firstNameEntryRight 1.5s ease-in-out 0.5s 1 normal forwards;
+}
+@keyframes firstNameEntryRight {
+    from {
+        visibility: hidden;
+        left: calc(0px + 120%);
+    } to {
+        visibility: visible;
+        left: 0px;
+    }
+}
+#title {
+    opacity: 0;
+    animation: entryTitle 1.5s ease-out 2s 1 normal forwards;
+}
+@keyframes entryTitle {
+    0% {
+        font-size: 0.1em;
+        opacity: 0;
+        transform: rotateX(0deg);
+    }
+    10% {
+        opacity: 0.1;
+        transform: rotateX(180deg);
+    }
+    20% {
+        opacity: 0.2;
+        transform: rotateX(0deg);
+    }
+    30% {
+        opacity: 0.3;
+        transform: rotateX(180deg);
+    }
+    40% {
+        opacity: 0.4;
+        transform: rotateX(0deg);
+    }
+    50% {
+        opacity: 0.5;
+        transform: rotateX(180deg);
+    }
+    60% {
+        opacity: 0.6;
+        transform: rotateX(0deg);
+    }
+    70% {
+        opacity: 0.7;
+        transform: rotateX(180deg);
+    }
+    80% {
+        opacity: 0.8;
+        transform: rotateX(0deg);
+    }
+    90% {
+        opacity: 0.9;
+        transform: rotateX(180deg);
+    } 
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}
+/* Version Mobile */
+@media screen and (max-width:599px) {
+    #topBar {
+        height: var(--heightSizeTopBarMobile);
+    }
+    #topBar img {
+        height: var(--heightSizeTopBarMobile);
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h3 {
+        font-size: 1.26em;
+    }
+}

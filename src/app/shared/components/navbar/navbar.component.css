@@ -5,61 +5,71 @@ img {
 .imgIcone {
     filter: invert(1);
 }
-.nav-link {
+/* Nav-Link */
+.navMenuLink {
     color: ivory;
     width: 100%;
+    padding: 8px 16px;
 }
-.nav-link:hover {
+.navMenuLink:hover {
     background-color: #FFF56B;
     color: #213840;
+    text-decoration: none;
 }
-.nav-link.active{
+.navMenuLink.active{
     font-weight: bold;
     background-color: #FFF56B;
     color: #213840;
 }
-.nav-link.active > .imgIcone{
+.navMenuLink.active > .imgIcone{
     filter: invert(0);
-}
-
-#burgerMenuDiv {
-    position: absolute;
-    top: 160px;
-    height: 40px;
-    width: 100%;
-    padding: 0 10px;
-}
-#menuSelectedName {
-    width: 100%;
-    border: solid 2px #213840;
-    border-radius: 12px;
-    font-weight: bold;
-    background-color: #FFF56B;
 }
 #menuElement {
     background-color: #427080;
 }
 /* Version tablette */
 @media screen and (max-width:959px){
+    #burgerMenuDiv {
+        position: absolute;
+        top: calc(var(--heightSizeTopbar) - 40px);
+        height: 40px;
+        width: 100%;
+        padding: 0 10px;
+    }
+    #burgerMenuDiv > #menuSelectedName {
+        width: 100%;
+        border: solid 2px #213840;
+        border-radius: 12px;
+        font-weight: bold;
+        background-color: #FFF56B;
+    }
     #menuElement {
-        z-index: 10;
         position: absolute;
         width: 50%;
-        top: 200px;
-        left: calc(0px - 100%);
+        top: var(--heightSizeTopbar);
+        left: calc(0px - 50%);
+        z-index: 10;
         border-bottom-right-radius: 12px;
         transition: left 0.3s ease-out;
     }
     #menuElement.show {
         left: 0px;
     }
-    .nav-link:hover {
+    .navMenuLink {
+        padding: 8px 10px;
+    }
+    .navMenuLink:hover {
         background-color: transparent;
     }
 }
 /* Version mobile */
 @media screen and (max-width:599px){
+    #burgerMenuDiv {
+        top: calc(var(--heightSizeTopBarMobile) - 40px);
+    }
     #menuElement {
+        top: var(--heightSizeTopBarMobile);
+        left: calc(0px - 100%);
         width: 100%;
         border-bottom-right-radius: 0px;
     }
