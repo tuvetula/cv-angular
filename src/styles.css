@@ -5,6 +5,7 @@ body {
   --companyColor: #427080;
   --dateColor: #63a8bf;
   --yellowColor: #fff56b;
+  --borderBottom: solid 1px #7896ff;
 }
 
 @font-face {
@@ -34,4 +35,9 @@ article:first-of-type {
   article {
       padding: 16px 0px;
   }
+}
+
+/* Liens ajouté dans string fourni par les services */
+.linkService {
+  color: #212529;
 }

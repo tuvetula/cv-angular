@@ -2,10 +2,10 @@
   <article fxLayout="column nowrap" fxLayoutGap="16px">
     <h4>{{ item.name }}</h4>
     <section fxLayout="column" fxLayoutAlign="center start">
-      <p class="m-0">
+      <div>
         <span class="company">{{ item.company }}</span> {{ item.city }},
         {{ item.country }}
-      </p>
+      </div>
       <p class="date">
         {{
           item.date.toLocaleDateString("fr-FR", {
@@ -16,18 +16,20 @@
       </p>
       <p>{{ item.description }}</p>
     </section>
-    <section fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="20px">
+    <!-- Langages -->
+    <section fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="24px">
       <ul>
-        <ng-container *ngFor="let langage of item.langagesFrontEnd">
-          <li>{{ langage }}</li>
+        <ng-container *ngFor="let langageFe of item.langagesFrontEnd">
+          <li>{{ langageFe }}</li>
         </ng-container>
       </ul>
       <ul>
-        <ng-container *ngFor="let langage of item.langagesBackEnd">
-          <li>{{ langage }}</li>
+        <ng-container *ngFor="let langageBE of item.langagesBackEnd">
+          <li>{{ langageBE }}</li>
         </ng-container>
       </ul>
     </section>
+    <!-- Icone Link -->
     <section
       fxLayout="row nowrap"
       fxLayoutAlign="center center"

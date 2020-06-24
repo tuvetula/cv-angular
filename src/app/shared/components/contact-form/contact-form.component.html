@@ -1,0 +1,21 @@
+<div fxLayout="column wrap" fxLayoutAlign="start center" fxLayoutGap="16px">
+    <h4>Formulaire de contact</h4>
+    <form [formGroup]="contactForm" (ngSubmit)="submit()" fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="16px" class="width100">
+            <div class="width100" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="15px">
+                <input type="text" formControlName="name" class="form-control" placeholder="Nom"> 
+                <input type="text" formControlName="firstName" class="form-control" placeholder="Prénom">
+            </div>
+            <input type="email" formControlName="email" class="form-control" placeholder="Email">
+            <textarea formControlName="message" class="form-control" rows="5" placeholder="Message"></textarea>
+            <div fxFlexAlign="center">
+                <button [disabled]="contactForm.invalid" type="submit" class="btn btn-success">Envoyer</button>
+            </div>
+    </form>
+    <!-- Message résultat envoi Message-->
+    <ng-container *ngIf="resultSendMessage; else elseTemplate">
+      <p class="alert alert-success text-center">Votre message a bien été envoyé</p>
+    </ng-container>
+    <ng-template #elseTemplate>
+       <p *ngIf="errorSendMessageToDisplay" class="alert alert-danger text-center"></p>
+    </ng-template>
+</div>

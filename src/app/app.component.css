@@ -132,4 +132,7 @@ app-navbar {
     h3 {
         font-size: 1.26em;
     }
+    #contentRouterOutlet {
+        padding: 12px;
+    }
 }

@@ -12,37 +12,37 @@ export class CvMenuService {
       {
         name: "Accueil",
         url: "/",
-        icone: "../../../../../assets/Pictures/Logos/home32.png"
+        icone: "../../../../../assets/Pictures/Logos/Navbar/home32.svg"
       },
       {
         name: "Formations",
         url: "/Formations",
-        icone: "../../../../../assets/Pictures/Logos/formations32.png"
+        icone: "../../../../../assets/Pictures/Logos/Navbar/formations32.svg"
       },
       {
         name: "Expériences professionnelles",
         url: "/Experiences-professionnelles",
-        icone: "../../../../../assets/Pictures/Logos/experiences32.png"
+        icone: "../../../../../assets/Pictures/Logos/Navbar/experiences32.svg"
       },
       {
         name: "Projets",
         url: "/Projets",
-        icone: "../../../../../assets/Pictures/Logos/projets32.png"
+        icone: "../../../../../assets/Pictures/Logos/Navbar/projets32.svg"
       },
       {
         name: "Compétences",
         url: "/Competences",
-        icone: "../../../../../assets/Pictures/Logos/competences32.png"
+        icone: "../../../../../assets/Pictures/Logos/Navbar/competences32.svg"
       },
       {
         name: "Loisirs",
         url: "/Loisirs",
-        icone: "../../../../../assets/Pictures/Logos/loisirs32.png"
+        icone: "../../../../../assets/Pictures/Logos/Navbar/loisirs32.svg"
       },
       {
         name: "Contact",
         url:"/Contact",
-        icone: "../../../../../assets/Pictures/Logos/contact32.svg"
+        icone: "../../../../../assets/Pictures/Logos/Navbar/contact32.svg"
       }
     ]
   }

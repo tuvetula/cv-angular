@@ -1,1 +1,96 @@
-<p>contact-container works!</p>
+<article
+  fxLayout="column"
+  fxLayoutAlign="start start"
+  fxLayoutGap="24px"
+  fxLayout.gt-xs="row"
+>
+  <div
+    id="leftSide"
+    fxLayout="column"
+    fxLayoutGap="24px"
+    fxLayoutAlign="start center"
+    fxFlexFill
+    fxLayoutAlign.gt-xs="space-between start"
+    fxFlex.gt-xs="30%"
+  >
+    <!-- Adresse -->
+    <div
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutAlign.gt-xs="center start"
+      fxLayoutGap="5px"
+    >
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+        <img
+          src="../../assets/Pictures/Logos/Contact/adress32.svg"
+          alt="Logo adresse"
+        />
+        <span>Adresse: </span>
+      </div>
+      <a
+        href="https://www.google.com/maps/place/62+Route+de+St+Ybars,+31190+Esperce/@43.5050493,1.182742,10z/data=!4m5!3m4!1s0x12aedb159c3c610b:0xd9c042c1f378db05!8m2!3d43.2993915!4d1.4203328?hl=fr"
+        target="_blank"
+      >
+        <div
+          fxLayout="column nowrap"
+          fxLayoutAlign="center start"
+          fxLayoutGap="5px"
+        >
+          <span>{{ informations.address.street }},</span>
+          <span
+            >{{ informations.address.zipcode }},
+            {{ informations.address.city }}
+            {{ informations.address.country }}</span
+          >
+        </div>
+      </a>
+    </div>
+    <!-- Telephone -->
+    <div
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutAlign.gt-xs="center start"
+      fxLayoutGap="5px"
+    >
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+        <img
+          src="../../assets/Pictures/Logos/Contact/phone32.svg"
+          alt="Logo téléphone"
+        />
+        <span>Téléphone: </span>
+      </div>
+      <a href="tel:{{ informations.phoneNumber }}">{{
+        informations.phoneNumber
+      }}</a>
+    </div>
+    <!-- Mail -->
+    <div
+      fxLayout="column"
+      fxLayoutAlign="center center"
+      fxLayoutAlign.gt-xs="center start"
+      fxLayoutGap="5px"
+    >
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+        <img
+          src="../../assets/Pictures/Logos/Contact/mail32.svg"
+          alt="Logo mail"
+        />
+        <span>Mail: </span>
+      </div>
+      <a href="mailto:{{ informations.mail }}">{{ informations.mail }}</a>
+    </div>
+    <!-- Social Network -->
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+      <a href="{{ informations.linkedIn }}" target="_blank">
+        <img
+          src="../../assets/Pictures/Logos/Contact/linkedin32.svg"
+          alt="Logo linkedIn"
+        />
+      </a>
+    </div>
+  </div>
+  <!-- Formulaire de contact-->
+  <div fxFlexFill fxFlex.gt-xs="70%">
+    <app-contact-form></app-contact-form>
+  </div>
+</article>

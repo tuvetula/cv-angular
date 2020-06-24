@@ -1,0 +1,10 @@
+.width100 {
+    width: 100%;
+}
+/* Formulaire */
+input.ng-touched.ng-invalid , textarea.ng-touched.ng-invalid {
+    border: solid 1px red;
+}
+input.ng-touched.ng-valid ,  textarea.ng-touched.ng-valid {
+    border: solid 1px green;
+}

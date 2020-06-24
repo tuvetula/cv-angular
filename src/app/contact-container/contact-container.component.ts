@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { InformationsModel } from '../shared/Models/informations.model';
+
 import { MenuSelectedNameService } from '../shared/services/Observables/menu-selected-name.service';
+import { InformationsService } from '../shared/services/Contact/informations.service';
 
 @Component({
   selector: 'app-contact-container',
@@ -8,12 +11,15 @@ import { MenuSelectedNameService } from '../shared/services/Observables/menu-sel
 })
 export class ContactContainerComponent implements OnInit {
   private nameSection: string = "Contact";
+  public informations: InformationsModel;
+
   constructor(
-    private menuSelectedNameService: MenuSelectedNameService
+    private menuSelectedNameService: MenuSelectedNameService,
+    private informationsService: InformationsService,
   ) { }
 
   ngOnInit(): void {
     this.menuSelectedNameService.menuSelectedName.next(this.nameSection);
+    this.informations = this.informationsService.listInformations; 
   }
-
 }

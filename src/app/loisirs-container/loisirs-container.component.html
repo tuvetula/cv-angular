@@ -1,1 +1,6 @@
-<p>loisirs-container works!</p>
+<ng-container *ngFor="let item of listLoisirs">
+  <article>
+    <h4>{{ item.name }}</h4>
+    <p innerHtml="{{ item.description }}"></p>
+  </article>
+</ng-container>
