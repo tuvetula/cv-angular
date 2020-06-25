@@ -2,7 +2,7 @@
 svg.back-to-top {
   visibility: hidden;
   position: fixed;
-  z-index: 999;
+  z-index: 98;
   right: 20px;
   bottom: 20px;
   width: 48px;

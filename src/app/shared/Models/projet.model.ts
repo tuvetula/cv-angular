@@ -7,6 +7,6 @@ export interface ProjetModel {
   description: string;
   imagePath: string[];
   langagesFrontEnd: string[];
-  langagesBackEnd: string[]
-  documentationPath: string;
+  langagesBackEnd: string[];
+  documentationUrl?: string;
 }

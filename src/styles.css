@@ -40,6 +40,6 @@ article:first-of-type {
 }
 
 /* Liens ajouté dans string fourni par les services */
-.linkService {
-  color: #212529;
+.linkService , .linkService:hover {
+  color: #63A8BF;
 }

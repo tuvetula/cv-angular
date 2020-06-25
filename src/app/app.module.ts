@@ -7,7 +7,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFireStorageModule, AngularFireStorage } from "@angular/fire/storage"
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
@@ -46,8 +48,10 @@ import { TopbarBackgroundComponent } from './shared/components/topbar-background
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    AngularFireStorageModule,
     FlexLayoutModule,
     AppRoutingModule,
     NgbModule
