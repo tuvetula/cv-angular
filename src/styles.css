@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+  
 body {
   height: 100%;
   --nameColor: #213840;
@@ -8,21 +10,36 @@ body {
   --borderBottom: solid 1px #7896ff;
   --heightSizeTopbar: 190px;
   --heightSizeTopBarMobile: 166px;
-}
 
+  
+}
+/* FONTS */
 @font-face {
   font-family: molle-italic;
   src: url(assets/Fonts/Molle-Italic.ttf);
 }
+@font-face {
+  font-family: Quenda;
+  src: url(assets/Fonts/Quenda-Medium.otf);
+}
+*{
+  font-family: Helvetica,Verdana,sans-serif;
+}
+h4{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: var(--nameColor);
+}
 
+/* OTHERS GENERAL */
 li {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 li:last-of-type {
     margin-bottom: 0px;
 }
 article {
-  padding: 16px;
+  padding: 24px;
   border-bottom: solid 1px #7896ff;
 }
 article:last-of-type {
@@ -31,6 +48,12 @@ article:last-of-type {
 }
 article:first-of-type {
   padding-top: 0px;
+}
+section {
+  padding: 0 16px;
+}
+p {
+  text-align: justify;
 }
 
 @media screen and (max-width: 959px){

@@ -1,5 +1,5 @@
 <ng-container *ngFor="let item of listProjets">
-  <article fxLayout="column nowrap" fxLayoutGap="16px">
+  <article fxLayout="column nowrap">
     <h4>{{ item.name }}</h4>
     <section fxLayout="column" fxLayoutAlign="center start">
       <div>
@@ -14,7 +14,7 @@
           }) | titlecase
         }}
       </p>
-      <p class="text-justify" innerHtml="{{ item.description }}"></p>
+      <p innerHtml="{{ item.description }}"></p>
     </section>
     <!-- Langages -->
     <section fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="24px">
@@ -33,7 +33,7 @@
     <section
       fxLayout="row nowrap"
       fxLayoutAlign="center center"
-      fxLayoutGap="15px"
+      fxLayoutGap="16px"
     >
       <ng-container *ngIf="item.url">
         <a [href]="item.url" target="_Blank"
@@ -45,7 +45,7 @@
         /></a>
       </ng-container>
       <ng-container *ngIf="item.gitLink">
-        <a [href]="item.gitLink" target="_Blank"
+        <a [href]="item.gitLink" target="_blank"
           ><img
             title="Lien github"
             class="imgLink"
@@ -63,40 +63,29 @@
         />
       </ng-container>
       <ng-container *ngIf="item.documentationUrl">
-        <img
-          (click)="showPdfModal(item.documentationUrl)"
-          class="imgLink"
-          tabindex="0"
-          src="../../assets/Pictures/Logos/Projets/pdf.svg"
-          alt="Logo documentation"
-        />
+        <a [href]="item.documentationUrl" target="_blank">
+          <img
+            class="imgLink"
+            tabindex="0"
+            src="../../assets/Pictures/Logos/Projets/pdf.svg"
+            alt="Logo documentation"
+          />
+        </a>
       </ng-container>
     </section>
   </article>
 </ng-container>
 
 <!-- Modal -->
-<div #modal id="modal" class="modal">
+<div #modal id="modal" class="modal" (click)="closeImagePathModal($event)">
   <!-- The Close Button -->
-  <span class="close" (click)="closeImagePathModal()">&times;</span>
-  <div class="modalContentDiv">
+  <span class="closeModal">&times;</span>
+  <div class="modal-content" #carousel>
     <!-- Modal Content (The Image) -->
     <ng-container *ngIf="showCarousel">
       <app-carousel-config
         [images]="imagePathToShowInCarousel"
       ></app-carousel-config>
-    </ng-container>
-    <!-- Pdf viewer -->
-    <ng-container *ngIf="showPdf">
-      <div fxLayout="row" fxLayoutAlign="center center">
-        <iframe
-          id="iframePdf"
-          [src]="pdfSrc"
-          allowfullscreen="true"
-        >
-        </iframe>
-
-      </div>
     </ng-container>
   </div>
 </div>

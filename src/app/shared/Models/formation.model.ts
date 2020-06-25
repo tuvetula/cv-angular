@@ -7,5 +7,6 @@ export interface FormationModel {
   endDate: Date;
   diplom: string;
   diplomImgUrl?: string;
+  diplomImgUrlThumbnail?: string;
   description?: string;
 }

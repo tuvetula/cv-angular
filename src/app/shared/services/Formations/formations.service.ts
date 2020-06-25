@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { FormationModel } from '../../Models/list-formations.model';
+import { FormationModel } from '../../Models/formation.model';
 
 @Injectable()
 export class FormationsService {
@@ -15,6 +15,7 @@ export class FormationsService {
         endDate: new Date(2020,3),
         diplom: 'Certificat de réussite',
         diplomImgUrl: '../../../../../assets/Pictures/Diplomes/DymaAngular.jpg',
+        diplomImgUrlThumbnail: '../../../../../assets/Pictures/Diplomes/DymaAngularThumbnail.jpg',
         description: 'Formation en ligne'
       },
       {
@@ -26,6 +27,7 @@ export class FormationsService {
         endDate: new Date(2020,2),
         diplom: "Certificat de réussite",
         diplomImgUrl: '../../../../../assets/Pictures/Diplomes/OpcAngular.jpg',
+        diplomImgUrlThumbnail: '../../../../../assets/Pictures/Diplomes/OpcAngularThumbnail.jpg',
         description: 'Formation en ligne'
       },
       {
@@ -37,6 +39,7 @@ export class FormationsService {
         endDate: new Date(2019, 10),
         diplom: 'Titre professionnel de niveau 6 obtenu (bac +3)',
         diplomImgUrl: '../../../../../assets/Pictures/Diplomes/Cda.jpg',
+        diplomImgUrlThumbnail: '../../../../../assets/Pictures/Diplomes/CdaThumbnail.jpg',
         description: null,
       },
       {
@@ -49,6 +52,7 @@ export class FormationsService {
         endDate: new Date(2008, 4),
         diplom: 'Titre professionnel de niveau 5 obtenu (bac +2)',
         diplomImgUrl: '../../../../../assets/Pictures/Diplomes/Tsrite.jpg',
+        diplomImgUrlThumbnail: '../../../../../assets/Pictures/Diplomes/TsriteThumbnail.jpg',
         description: null,
       },
     ];

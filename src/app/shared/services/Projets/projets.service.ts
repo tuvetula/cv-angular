@@ -27,7 +27,7 @@ export class ProjetsService {
         langagesFrontEnd: ['Html', 'Css', 'Javascript', 'Bootstrap','Puppeteer'],
         langagesBackEnd: ['Php', 'Sql'],
         documentationUrl:
-          'MemoireAsDeLaColoc.pdf'
+          '../../assets/Pdf/MemoireAsDeLaColoc.pdf'
       },
       {
         name: 'Cours Js',

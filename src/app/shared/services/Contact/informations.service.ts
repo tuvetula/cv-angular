@@ -19,6 +19,7 @@ export class InformationsService {
       phoneNumber: "06 03 91 86 13",
       mail: "romain.marcant@gmail.com",
       linkedIn: "https://www.linkedin.com/in/romain-marcant/",
+      github: "https://github.com/tuvetula",
       dateOfBirth: new Date(1982,5,17),
       nbOfChildrens: 2,
 

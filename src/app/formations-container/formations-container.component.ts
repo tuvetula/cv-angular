@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormationsService } from '../shared/services/Formations/formations.service';
-import { FormationModel } from '../shared/Models/list-formations.model';
+import { FormationModel } from '../shared/Models/formation.model';
 import { MenuSelectedNameService } from '../shared/services/Observables/menu-selected-name.service';
 
 @Component({
@@ -27,10 +27,12 @@ export class FormationsContainerComponent implements OnInit {
   }
 
   public showDiplomModal(diplomImgUrl: string): void {
-    this.modal.nativeElement.style.display = 'block';
+    this.modal.nativeElement.style.display = 'flex';
     this.modalImg.nativeElement.src = diplomImgUrl;
   }
-  public closeDiplomModal(): void {
-    this.modal.nativeElement.style.display = 'none';
+  public closeDiplomModal(event: any): void {
+    if(event.target != this.modalImg.nativeElement){
+      this.modal.nativeElement.style.display = 'none';
+    }
   }
 }

@@ -11,4 +11,5 @@ export interface InformationsModel {
   dateOfBirth: Date;
   nbOfChildrens: number;
   linkedIn: string;
+  github: string;
 }

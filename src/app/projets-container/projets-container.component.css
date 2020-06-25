@@ -49,12 +49,7 @@ h4 {
     margin: auto;
     width: 80%;
     max-width: 700px;
-    height: 100%;
     background-color: transparent;
-  }
-  #iframePdf{
-    width: 80%;
-    height: calc(0px + 80vh);
   }
   
   /* Add Animation - Zoom in the Modal */
@@ -68,17 +63,17 @@ h4 {
   }
   
   /* The Close Button */
-  .close {
+  .closeModal {
     position: absolute;
-    top: calc(5vh - 25.86px);
-    right: 35px;
+    top: calc(5vh - 20px);
+    left: calc(100% - 25px - 2%);
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
   }
-  .close:hover,
-.close:focus {
+  .closeModal:hover,
+.closeModal:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
@@ -88,9 +83,5 @@ h4 {
 @media screen and (max-width: 599px){
   .modal-content {
     width: 100%;
-  }
-  #iframePdf{
-    width: 100%;
-    height: calc(0px + 90vh);
   }
 }

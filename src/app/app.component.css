@@ -1,3 +1,10 @@
+#contentRouterOutlet {
+  margin:0;
+  background: url(../assets/Pictures/Background/body/cubesBlancsPng.png); 
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: auto;
+  background-position: top;
+}
 /* Version Lg */
 @media screen and (min-width:960px){
   app-navbar {
@@ -5,7 +12,12 @@
     min-height: 100vh;
   }
   #contentRouterOutlet {
-    padding: 24px;
+      margin:0;
+      background: url(../assets/Pictures/Background/body/cubesBlancsPng.png); 
+      -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+      background-size: cover;
+      background-position: top;
+      padding: 24px;
   }
 }
 /* Version Tablette */

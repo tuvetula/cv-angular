@@ -18,14 +18,14 @@ export class TopbarBackgroundComponent implements OnInit {
       switchMap((windowInnerWidth) => {
         let imgPath: string;
         if (windowInnerWidth < 600) {
-          imgPath = '../../../../assets/Pictures/Background/networkMobile.jpg';
+          imgPath = '../../../../assets/Pictures/Background/topbar/networkMobile.jpg';
         } else if (windowInnerWidth < 960) {
           imgPath =
-            '../../../../assets/Pictures/Background/networkTablette.jpg';
+            '../../../../assets/Pictures/Background/topbar/networkTablette.jpg';
         } else if (windowInnerWidth < 1281) {
-          imgPath = '../../../../assets/Pictures/Background/network1280.jpg';
+          imgPath = '../../../../assets/Pictures/Background/topbar/network1280.jpg';
         } else {
-          imgPath = '../../../../assets/Pictures/Background/network1920.jpg';
+          imgPath = '../../../../assets/Pictures/Background/topbar/network1920.jpg';
         }
         return new Observable<string>(observer => observer.next(imgPath));
       })

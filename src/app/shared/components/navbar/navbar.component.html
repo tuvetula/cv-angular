@@ -11,7 +11,7 @@
     alt="Menu Burger"
     (click)="displayMenuElement()"
   />
-  <div id="menuSelectedName" fxLayout="row" fxLayoutAlign="center center">
+  <div id="menuSelectedName" class="quenda" fxLayout="row" fxLayoutAlign="center center">
     {{ menuSelectedTitle | async }}
   </div>
 </div>
@@ -31,7 +31,7 @@
       fxLayoutGap="20px"
     >
       <img [src]="item.icone" alt="icone" class="imgIcone" />
-      <span>{{ item.name }}</span>
+      <span class="quenda">{{ item.name }}</span>
     </a>
   </ng-container>
 </div>
