@@ -1,6 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-
-  
 body {
   height: 100%;
   --nameColor: #213840;
@@ -10,8 +8,6 @@ body {
   --borderBottom: solid 1px #7896ff;
   --heightSizeTopbar: 190px;
   --heightSizeTopBarMobile: 166px;
-
-  
 }
 /* FONTS */
 @font-face {
@@ -22,7 +18,7 @@ body {
   font-family: Quenda;
   src: url(assets/Fonts/Quenda-Medium.otf);
 }
-*{
+p,li,span{
   font-family: Helvetica,Verdana,sans-serif;
 }
 h4{
@@ -65,4 +61,15 @@ p {
 /* Liens ajouté dans string fourni par les services */
 .linkService , .linkService:hover {
   color: #63A8BF;
+}
+
+/* Carousel */
+.carousel-indicators {
+  bottom: -60px;
+}
+.carousel-indicators > li {
+  background-color: #fff56b;
+}
+.carousel-indicators > li.active {
+  background-color: #63a8bf;
 }
