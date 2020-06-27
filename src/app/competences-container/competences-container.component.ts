@@ -41,5 +41,4 @@ export class CompetencesContainerComponent implements OnInit {
       }
     });
   }
-
 }

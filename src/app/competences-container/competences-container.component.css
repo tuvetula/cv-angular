@@ -6,159 +6,120 @@
   border-radius: 50%;
   background-color: transparent;
 }
+.circleLeft,.circleRight{
+  width: 50%;
+  height: 100%;
+}
+.circleLeft {
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+.circleRight {
+  border-bottom-right-radius: 9px;
+  border-top-right-radius: 9px;
+}
 .circleColored {
-    animation: 1s ease-in-out point;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
+  animation: point 1.5s ease-in-out 1s 1 normal forwards;
 }
 @keyframes point {
   from {
-    background-color: white;
-  }
-  to {
+  }to {
     background-color: #63A8BF;
   }
 }
-.circleLeft {
-  width: 50%;
-  height: 100%;
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-}
-.circleRight {
-  width: 50%;
-  height: 100%;
-  border-bottom-right-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
 /* Animation DIV */
+.competencesContainer{
+  height:100%;
+}
 .competenceRow {
   height:40px;
 }
 .competence {
   padding: 0 10px;
   width: 50%;
-  height: 100%;
-}
-span {
-  font-size: 1.2em;
 }
 .competenceName {
-    position: relative;
-    left: 0;
-    opacity: 1;
-    animation: 1s linear entry;
+  font-size: 1.3em;
+  animation: 1s linear entryCn;
 }
-@keyframes entry {
+@keyframes entryCn {
     from {
         opacity: 0;
-        left: -50%;
-    }
-    to {
+        transform: translateX(-150%);
+    }to {
         opacity: 1;
-        left:0;
-    }
+     }
 }
 .competenceLevel {
-    position: relative;
-    right: 0;
-    animation: 1s linear entryRight;
+    animation: 1s linear entryCl;
 }
-@keyframes entryRight {
+@keyframes entryCl {
     from {
-        right: -50%;
-    }
-    to {
-        right: 0;
+        opacity: 0;
+        transform: translateX(150%);
+    }to {
+        opacity: 1;
     }
 }
-
 /* Logos */
 .logo {
   width: 60px;
-  position: absolute;
-  top: calc(0px - 100px);
 }
-/* LOGO HTML */
-#HtmlLogo {
-  left: 33%;
-  animation: leftUpLogo 1s ease-in-out 3s 1 normal forwards, rotateClockInverse 0.3s linear 4s 1 normal forwards;
+.LogosRight,.LogosLeft {
+  height: 100%;
+  z-index: -1;
+  visibility: hidden;
+  animation: fallTop 1.5s ease 2.5s 1 normal forwards;
 }
-/* LOGO CSS */
-#CssLogo {
-  left: 41%;
-  animation: leftUpLogo 1s ease-in-out 3s 1 normal forwards,rotateClockInverse 0.3s linear 4s 1 normal forwards;
-}
-@keyframes leftUpLogo{
-  from {
-    top: 200px;
-  } to {
-    top: 250px;
+@keyframes fallTop {
+  from{
+    transform: translateY(-150%);
+  }to{
+    visibility: visible;
+    transform: translateY(0);
   }
 }
-/* BOOTSTRAP LOGO */
-#BootstrapLogo {
-  left: 33%;
-  animation: leftDownLogo 1s ease-in-out 2s 1 normal forwards,rotateClockInverse 0.3s linear 4s 1 normal forwards;
+/* LEFT LOGO */
+#HtmlLogo , #CssLogo , #BootstrapLogo , #VsCodeLogo{
+  animation: rotateClockInverse 0.3s linear 4s 1 normal forwards;
 }
-/* VSCODE LOGO */
-#VsCodeLogo {
-  left: 41%;
-  animation: leftDownLogo 1s ease-in-out 2s 1 normal forwards,rotateClockInverse 0.3s linear 4s 1 normal forwards;
-}
-@keyframes leftDownLogo {
-  from {
-    top: 200px;
-  } to {
-    top: 450px;
-  }
-}
-/* RIGHT UP LOGO */
-#JavascriptLogo{
-  left: 80%;
-  animation: rightUpLogo 1s ease-out 3s 1 normal forwards , rotateClock 0.3s linear 4s 1 normal forwards;
-}
-#AngularLogo {
-  left: 90%;
-  animation: rightUpLogo 1s ease-out 3s 1 normal forwards , rotateClock 0.3s linear 4s 1 normal forwards;
-}
-@keyframes rightUpLogo {
-  from {
-    top: 200px;
-  } to {
-    top: 250px;
-  }
-}
-/* RIGHT DOWN LOGO */
-#PhpLogo {
-  left: 80%;
-  animation: rightDownLogo 1s ease-out 2s 1 normal forwards , rotateClock 0.3s linear 4s 1 normal forwards;
-}
-#LaravelLogo {
-  left: 90%;
-  animation: rightDownLogo 1s ease-out 2s 1 normal forwards , rotateClock 0.3s linear 4s 1 normal forwards;
 
-}
-@keyframes rightDownLogo {
-  from {
-    top: 200px;
-  } to {
-    top: 450px;
-  }
+/* RIGHT LOGO */
+#JavascriptLogo , #AngularLogo , #PhpLogo , #LaravelLogo{
+  animation: rotateClock 0.3s linear 4s 1 normal forwards;
 }
 /* ROTATE */
 @keyframes rotateClock {
   from {
-    transform: rotateZ(0deg);
   } to {
-    transform: rotateZ(35deg);
+    transform: rotateZ(25deg);
   }
 }
 @keyframes rotateClockInverse {
   from  {
-    transform: rotateZ(0deg);
   } to {
     transform: rotateZ(-25deg);
+  }
+}
+/* Tablette */
+@media screen and (max-width:959px){
+  .competenceName{
+    font-size: 1.2em;
+  }
+  .logo{
+    width: 40px;
+  }
+}
+/* Mobile */
+@media screen and (max-width:599px){
+  .competenceName{
+    font-size: 1em;
+  }
+  .circle {
+    width: 15px;
+    height: 15px;
+  }
+  .logo{
+    width:25px;
   }
 }

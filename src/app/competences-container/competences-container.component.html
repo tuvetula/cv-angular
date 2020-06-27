@@ -1,39 +1,45 @@
-<ng-container *ngFor="let item of listCompetences">
-  <div class="competenceRow" fxLayout="row nowrap">
-    <div class="competence" fxLayout="row nowrap" fxLayoutAlign="end center">
-      <span class="competenceName">{{ item.name }}</span>
-    </div>
-    <div class="competence competenceLevel" fxLayout="row nowrap" fxLayoutAlign="start center">
-      <div class="circle" fxLayout="row nowrap" fxLayoutAlign="start center">
-        <div class="circleLeft" [class.circleColored]="item.note > 0"></div>
-        <div class="circleRight" [class.circleColored]="item.note > 10"></div>
-      </div>
-      <div class="circle" fxLayout="row nowrap" fxLayoutAlign="start center">
-        <div class="circleLeft" [class.circleColored]="item.note > 20"></div>
-        <div class="circleRight" [class.circleColored]="item.note > 30"></div>
-      </div>
-      <div class="circle" fxLayout="row nowrap" fxLayoutAlign="start center">
-        <div class="circleLeft" [class.circleColored]="item.note > 40"></div>
-        <div class="circleRight" [class.circleColored]="item.note > 50"></div>
-      </div>
-      <div class="circle" fxLayout="row nowrap" fxLayoutAlign="start center">
-        <div class="circleLeft" [class.circleColored]="item.note > 60"></div>
-        <div class="circleRight" [class.circleColored]="item.note > 70"></div>
-      </div>
-      <div class="circle" fxLayout="row" fxLayoutAlign="start center">
-        <div class="circleLeft" [class.circleColored]="item.note > 80"></div>
-        <div class="circleRight" [class.circleColored]="item.note > 90"></div>
-      </div>
-    </div>
+<div class="competencesContainer" fxLayout="row" fxLayoutAlign="start center">
+  <div class="LogosLeft" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="24px" fxFlex="35">
+    <img class="logo" src="../../assets/Pictures/Logos/Competences/html5.svg" alt="Logo html" id="HtmlLogo">
+    <img class="logo" src="../../assets/Pictures/Logos/Competences/css3.svg" alt="Logo css" id="CssLogo">
+    <img class="logo" src="../../assets/Pictures/Logos/Competences/bootstrap.svg" alt="Logo bootstrap" id="BootstrapLogo">
+    <img class="logo" src="../../assets/Pictures/Logos/Competences/vsCode.svg" alt="Logo vscode" id="VsCodeLogo">
   </div>
-</ng-container>
-<div fxHide fxShow.gt-sm fxLayout="column" fxLayoutAlign="space-around center">
-  <img class="logo" src="../../assets/Pictures/Logos/Competences/html5.svg" alt="Logo html" id="HtmlLogo">
-  <img class="logo" src="../../assets/Pictures/Logos/Competences/css3.svg" alt="Logo css" id="CssLogo">
-  <img class="logo" src="../../assets/Pictures/Logos/Competences/bootstrap.svg" alt="Logo bootstrap" id="BootstrapLogo">
-  <img class="logo" src="../../assets/Pictures/Logos/Competences/vsCode.svg" alt="Logo vscode" id="VsCodeLogo">
-  <img class="logo" src="../../assets/Pictures/Logos/Competences/javascript.svg" alt="Logo javascript" id="JavascriptLogo">
-  <img class="logo" src="../../assets/Pictures/Logos/Competences/angular.svg" alt="Logo angular" id="AngularLogo">
-  <img class="logo" src="../../assets/Pictures/Logos/Competences/php.svg" alt="Logo php" id="PhpLogo">
-  <img class="logo" src="../../assets/Pictures/Logos/Competences/laravel.svg" alt="Logo laravel" id="LaravelLogo">
+  <div fxFlex="100" fxFlex.gt-xs="30">
+    <ng-container *ngFor="let item of listCompetences">
+      <div class="competenceRow" fxLayout="row nowrap">
+        <div class="competence competenceName" fxLayout="row" fxLayoutAlign="end center">
+          <span>{{ item.name }}</span>
+        </div>
+        <div class="competence competenceLevel" fxLayout="row" fxLayoutAlign="start center">
+          <div class="circle" fxLayout="row nowrap" fxLayoutAlign="center center">
+            <div class="circleLeft" [class.circleColored]="item.note > 0"></div>
+            <div class="circleRight" [class.circleColored]="item.note > 10"></div>
+          </div>
+          <div class="circle" fxLayout="row nowrap" fxLayoutAlign="start center">
+            <div class="circleLeft" [class.circleColored]="item.note > 20"></div>
+            <div class="circleRight" [class.circleColored]="item.note > 30"></div>
+          </div>
+          <div class="circle" fxLayout="row nowrap" fxLayoutAlign="start center">
+            <div class="circleLeft" [class.circleColored]="item.note > 40"></div>
+            <div class="circleRight" [class.circleColored]="item.note > 50"></div>
+          </div>
+          <div class="circle" fxLayout="row nowrap" fxLayoutAlign="start center">
+            <div class="circleLeft" [class.circleColored]="item.note > 60"></div>
+            <div class="circleRight" [class.circleColored]="item.note > 70"></div>
+          </div>
+          <div class="circle" fxLayout="row" fxLayoutAlign="start center">
+            <div class="circleLeft" [class.circleColored]="item.note > 80"></div>
+            <div class="circleRight" [class.circleColored]="item.note > 90"></div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div class="LogosRight" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="24px" fxFlex="35">
+    <img class="logo" src="../../assets/Pictures/Logos/Competences/javascript.svg" alt="Logo javascript" id="JavascriptLogo">
+    <img class="logo" src="../../assets/Pictures/Logos/Competences/angular.svg" alt="Logo angular" id="AngularLogo">
+    <img class="logo" src="../../assets/Pictures/Logos/Competences/php.svg" alt="Logo php" id="PhpLogo">
+    <img class="logo" src="../../assets/Pictures/Logos/Competences/laravel.svg" alt="Logo laravel" id="LaravelLogo">
+  </div>
 </div>

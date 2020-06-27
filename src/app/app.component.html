@@ -1,7 +1,7 @@
 <app-topbar-background></app-topbar-background>
-<div fxLayout="column nowrap" fxLayout.gt-sm="row nowrap">
-  <app-navbar fxFlex.gt-sm="20"></app-navbar>
-  <div id="contentRouterOutlet" fxFlex.gt-sm="80">
+<div fxLayout="row nowrap">
+  <app-navbar></app-navbar>
+  <div id="contentRouterOutlet"fxFlex.lt-md="100" fxFlex.gt-sm="80">
     <router-outlet></router-outlet>
   </div>
 </div>
