@@ -14,10 +14,11 @@ export class ProjetsService {
         url: 'https://www.app.asdelacoloc.fr',
         gitLink: 'https://github.com/tuvetula/AsDeLaColocation',
         description:
-          `Application web permettant aux propriétaires de biens immobiliers souhaitant les proposer au marché de la colocation, de centraliser leurs annonces et ne plus gérer la publication sur les différentes plateformes spécialisées.<br>
-          Ce projet a été réalisé lors de mon stage de fin de formation à l'Adrar.<br>
-          J'ai maquetté l'application, conçu et mis en place la base de données, développé la partie front-end et back-end.
-          Le projet a été déployé à la fin du stage.<br> J'ai ensuite développé un programme à l'aide de puppeteer permettant de diffuser les annonces enregistrées par les utilisateurs.`,
+          `Application web destinée à la gestion d’annonces immobilières.<br><br>
+          Ce projet a été réalisé lors de mon stage de fin de formation à l&#39;Adrar.<br><br>
+          Maquettage, conception de la base données, développement de la partie front-end et back-end. Déploiement
+          du projet.<br><br>
+          Utilisation de la librairie 'puppeteer' pour le développement d'un outil de diffusion automatique.`,
         imagePath: [
           '../../../../../assets/Pictures/IllustrationProjets/AsDeLaColoc/AsDeLaColoc.png',
           '../../../../../assets/Pictures/IllustrationProjets/AsDeLaColoc/AsDeLaColoc1.png',
@@ -35,9 +36,10 @@ export class ProjetsService {
         company: 'Projet personnel',
         url: 'https://coursjs-e9340.web.app/',
         gitLink: 'https://github.com/tuvetula/CoursJs',
-        description: `Site web regroupant les différents cours que j'ai suivi via la plateforme 'Dyma.fr'. J'ai réalisé ce projet afin de me familiariser avec Angular et d'avoir un support sur lequel me référencer.<br>
-        J'ai utilisé les services de Firebase afin de gérer l'authentification et le stockage de données.<br>
-        Je continue d'apporter de nouvelles fonctionnalités et d'alimenter ce site au fur et à mesure que j'avance dans mes formations.<br> `,
+        description: `Développement d’un site web regroupant les différents cours suivis afin de me
+        créer un support technique de référence.<br><br>
+        Les objectifs : familiarisation avec Angular, Firebase pour l'authentification et le stockage de données.<br><br>
+        Enrichissement de la base par de nouvelles fonctionnalités et informations.`,
         imagePath: [
           '../../../../../assets/Pictures/IllustrationProjets/CoursJs/CoursJs1.png',
           '../../../../../assets/Pictures/IllustrationProjets/CoursJs/CoursJs2.png',
@@ -59,9 +61,8 @@ export class ProjetsService {
         url: 'https://morpion-js-tuvetula.web.app/',
         gitLink: 'https://github.com/tuvetula/Jeux/tree/master/Morpion',
         description:
-          `Projet réalisé en autonomie suite à mes premiers cours Javascript suivis lors de ma formation à l'Adrar.<br>
-          Le jeu fonctionne très bien, cela dit le code n'est pas très "joli" et reflète très bien mes débuts avec Javascript et le développement en général.<br>
-          Ce projet a été intéressant pour moi car il m'a fallu réfléchir au mode 1 player et donc programmer la façon de jouer de l'ordinateur.`,
+          `Conception et développement d'un jeu.<br><br>
+          Projet réalisé en autonomie suite à ma première formation Javascript.`,
         imagePath: [
           '../../../../../assets/Pictures/IllustrationProjets/Morpion/morpion.PNG',
         ],
@@ -75,7 +76,8 @@ export class ProjetsService {
         url: null,
         gitLink: 'https://github.com/tuvetula/BlogLaravel',
         description:
-          'Projet réalisé durant une formation chez ApFormation. Pendant 8 jours de formation sur Laravel, la construction de ce blog a été le fil rouge.',
+          `Construction et mise en place d'un blog.<br><br>
+          Projet réalisé durant une formation Laravel de 8 jours chez ApFormation.`,
         imagePath: [
           '../../../../../assets/Pictures/IllustrationProjets/BlogLaravel/LaravelBlog.png',
           '../../../../../assets/Pictures/IllustrationProjets/BlogLaravel/LaravelBlog1.png',

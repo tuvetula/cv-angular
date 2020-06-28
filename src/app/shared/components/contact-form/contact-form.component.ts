@@ -38,13 +38,17 @@ export class ContactFormComponent implements OnInit {
         this.resultSendMessage = true;
         this.resetForm();
       })
+      .finally(()=>{
+        setTimeout(() => {
+          this.resultSendMessage = false;
+        }, 5000);
+      })
       .catch(error => {
         this.resultSendMessage = false;
         this.errorSendMessageToDisplay = error;
       })
     }
   }
-
   public resetForm(): void {
     this.contactForm.reset();
   }

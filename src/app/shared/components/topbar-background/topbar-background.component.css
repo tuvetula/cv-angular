@@ -6,6 +6,7 @@ h1 , h3{
 #topBar {
     height: var(--heightSizeTopbar);
     background-color: #427080;
+    /* z-index: 10; */
 }
 .width100 {
     width: 100%;
@@ -107,7 +108,7 @@ h1 , h3{
         background: url('../../../../assets/Pictures/Background/topbar/networkMobile.jpg');
         background-position: bottom;
         background-size: cover;
-        height: var(--heightSizeTopBarMobile);
+        height: var(--heightSizeTopbarMobile);
     }
     h1 {
         font-size: 1.8em;

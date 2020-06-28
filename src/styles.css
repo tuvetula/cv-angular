@@ -7,7 +7,7 @@ body {
   --yellowColor: #fff56b;
   --borderBottom: solid 1px #7896ff;
   --heightSizeTopbar: 190px;
-  --heightSizeTopBarMobile: 166px;
+  --heightSizeTopbarMobile: 166px;
   --widthAppNavbar: 21%;
 }
 /* FONTS */
@@ -22,10 +22,14 @@ body {
 p,li,span{
   font-family: Helvetica,Verdana,sans-serif;
 }
-h4{
+h4 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   color: var(--nameColor);
+}
+h6 {
+  color: var(--companyColor);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* OTHERS GENERAL */
@@ -47,7 +51,10 @@ article:first-of-type {
   padding-top: 0px;
 }
 section {
-  padding: 0 16px;
+  padding: 0 16px 16px 16px;
+}
+article > section:last-of-type {
+  padding-bottom: 0px;
 }
 p {
   text-align: justify;

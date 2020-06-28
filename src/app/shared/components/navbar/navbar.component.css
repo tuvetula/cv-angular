@@ -68,10 +68,10 @@ img {
 /* Version mobile */
 @media screen and (max-width:599px){
     #burgerMenuDiv {
-        top: calc(var(--heightSizeTopBarMobile) - 40px);
+        top: calc(var(--heightSizeTopbarMobile) - 40px);
     }
     #menuElement {
-        top: var(--heightSizeTopBarMobile);
+        top: var(--heightSizeTopbarMobile);
         left: calc(0px - 100%);
         width: 100%;
         border-bottom-right-radius: 0px;

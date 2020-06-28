@@ -17,17 +17,20 @@
       <p innerHtml="{{ item.description }}"></p>
     </section>
     <!-- Langages -->
-    <section fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="24px">
-      <ul>
-        <ng-container *ngFor="let langageFe of item.langagesFrontEnd">
-          <li>{{ langageFe }}</li>
-        </ng-container>
-      </ul>
-      <ul>
-        <ng-container *ngFor="let langageBE of item.langagesBackEnd">
-          <li>{{ langageBE }}</li>
-        </ng-container>
-      </ul>
+    <section>
+      <h6>Technologies utilisées: </h6>
+      <div fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="24px">
+        <ul>
+          <ng-container *ngFor="let langageFe of item.langagesFrontEnd">
+            <li>{{ langageFe }}</li>
+          </ng-container>
+        </ul>
+        <ul>
+          <ng-container *ngFor="let langageBE of item.langagesBackEnd">
+            <li>{{ langageBE }}</li>
+          </ng-container>
+        </ul>
+      </div>
     </section>
     <!-- Icone Link -->
     <section

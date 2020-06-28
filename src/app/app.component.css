@@ -1,42 +1,55 @@
+#bodyWithoutTopbar {
+  min-height: calc(100vh - var(--heightSizeTopbar));
+}
 #contentRouterOutlet {
   margin:0;
 }
 /* Version Xl */
-@media screen and (min-width:1281px){
+@media screen and (min-width:1280px){
+  app-navbar {
+    background-color: #427080;
+    width: var(--widthAppNavbar);
+  }
   #contentRouterOutlet{
-    background: url(../assets/Pictures/Background/body/cubesBlancsXl.png); 
+    background: url(../assets/Pictures/Background/body/cubesBlancsXl.jpg); 
     background-size: cover;
     background-position: top;
+    padding: 24px;
+    z-index: -1;
   }
 }
 /* Version Lg */
-@media screen and (min-width:960px){
+@media screen and (min-width:960px) and (max-width: 1279px){
   app-navbar {
     background-color: #427080;
-    min-height: calc(100vh - var(--heightSizeTopbar));
     width: var(--widthAppNavbar);
   }
   #contentRouterOutlet {
-    background: url(../assets/Pictures/Background/body/cubesBlancsLg.png); 
+    background: url(../assets/Pictures/Background/body/cubesBlancsLg.jpg); 
     background-size: cover;
     background-position: top;
     padding: 24px;
   }
 }
 /* Version Tablette */
-@media screen and (max-width: 959px) {
+@media screen and (min-width:600px) and (max-width: 959px) {
   #contentRouterOutlet {
-    background: url(../assets/Pictures/Background/body/cubesBlancsTablette.png); 
-    background-position: center;
+    background: url(../assets/Pictures/Background/body/cubesBlancsTablette.jpg); 
+    background-position: top;
+    background-size: cover;
     background-attachment: fixed;
     padding: 16px;
   }
 }
 /* Version Mobile */
 @media screen and (max-width: 599px) {
+  #bodyWithoutTopbar {
+    min-height: calc(100vh - var(--heightSizeTopbarMobile));
+  }
   #contentRouterOutlet {
-    background: url(../assets/Pictures/Background/body/cubesBlancsMobile.png);
-    background-position: center;
+    background: url(../assets/Pictures/Background/body/cubesBlancsMobile.jpg);
+    background-position: top;
+    background-size: cover;
     background-attachment: fixed; 
     padding: 12px;
   }

@@ -1,6 +1,7 @@
 h4 {
     color: var(--nameColor);
 }
+h6
 .company {
     color: var(--companyColor);
     font-size: large;
