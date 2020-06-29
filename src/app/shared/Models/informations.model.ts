@@ -12,4 +12,5 @@ export interface InformationsModel {
   nbOfChildrens: number;
   linkedIn: string;
   github: string;
+  cv: string;
 }

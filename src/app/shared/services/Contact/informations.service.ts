@@ -20,6 +20,7 @@ export class InformationsService {
       mail: "romain.marcant@gmail.com",
       linkedIn: "https://www.linkedin.com/in/romain-marcant/",
       github: "https://github.com/tuvetula",
+      cv: "../../assets/Pdf/cv_Marcant_Romain.pdf",
       dateOfBirth: new Date(1982,5,17),
       nbOfChildrens: 2,
 
