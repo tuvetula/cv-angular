@@ -1,3 +1,4 @@
+
 h4 {
     color: var(--nameColor);
 }
@@ -20,6 +21,7 @@ h6
 }
 .imgLink {
     width: 40px;
+    cursor: pointer;
 }
 /* VERSION MOBILE */
 @media screen and (max-width: 959px){
