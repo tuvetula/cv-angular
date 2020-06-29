@@ -1,6 +1,5 @@
 #bodyWithoutTopbar {
   min-height: calc(100vh - var(--heightSizeTopbar));
-  z-index: 1;
 }
 #contentRouterOutlet {
   margin:0;

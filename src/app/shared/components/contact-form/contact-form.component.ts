@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { ContactService } from '../../services/Contact/contact.service';
+import { ContactService } from '../../services/Firebase/contact.service';
 import { Subscription } from 'rxjs';
 
 @Component({

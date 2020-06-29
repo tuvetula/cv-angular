@@ -24,7 +24,7 @@ export class LoisirsService {
       {
         name: "Théâtre",
         imgPath: "../../../../../assets/Pictures/Logos/Loisirs/theatre32.svg",
-        description: `J'aime beaucoup le théatre et j'en ai pratiqué pendant deux ans. L’exercice devant un public me permet de prendre confiance en moi et d’acquérir de l’assurance dans la
+        description: `J'apprécie aller au théatre mais aussi pratiquer. L’exercice devant un public me permet de prendre confiance en moi et d’acquérir de l’assurance dans la
         prise de parole.`
       }
     ]

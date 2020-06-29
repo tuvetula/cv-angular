@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { InformationsModel } from '../shared/Models/informations.model';
-
 import { MenuSelectedNameService } from '../shared/services/Observables/menu-selected-name.service';
 import { InformationsService } from '../shared/services/Contact/informations.service';
 
