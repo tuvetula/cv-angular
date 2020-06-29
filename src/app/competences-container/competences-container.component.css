@@ -61,6 +61,7 @@
 /* Logos */
 .logo {
   width: 60px;
+  /* z-index: -1; */
 }
 .LogosRight,.LogosLeft {
   height: 100%;
@@ -69,8 +70,10 @@
 }
 @keyframes fallTop {
   from{
+    opacity: 0;
     transform: translateY(-150%);
   }to{
+    opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }

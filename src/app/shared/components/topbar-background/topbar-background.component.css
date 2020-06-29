@@ -6,10 +6,6 @@ h1 , h3{
 #topBar {
     height: var(--heightSizeTopbar);
     background-color: #427080;
-    /* z-index: 10; */
-}
-.width100 {
-    width: 100%;
 }
 #name , #firstName {
     visibility: hidden;

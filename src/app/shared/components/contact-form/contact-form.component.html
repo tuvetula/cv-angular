@@ -1,64 +1,90 @@
 <div fxLayout="column wrap" fxLayoutAlign="start center" fxLayoutGap="16px">
   <h4>Formulaire de contact</h4>
   <!-- Message résultat envoi Message-->
-  <ng-container *ngIf="resultSendMessage; else elseTemplate">
+  <ng-container *ngIf="resultSendMessage">
     <p class="alert alert-success text-center">
       Votre message a bien été envoyé
     </p>
   </ng-container>
-  <ng-template #elseTemplate>
-    <p
-      *ngIf="errorSendMessageToDisplay"
-      class="alert alert-danger text-center"
-    ></p>
-  </ng-template>
-  <form
-    [formGroup]="contactForm"
-    (ngSubmit)="submit()"
-    fxLayout="column"
-    fxLayoutAlign="center start"
-    fxLayoutGap="16px"
-    class="width100"
-  >
-    <div
-      class="width100"
-      fxLayout="row"
-      fxLayoutAlign="space-between center"
-      fxLayoutGap="15px"
+  <ng-container *ngIf="errorSendMessageToDisplay">
+    <p class="alert alert-danger text-center">
+      {{ errorSendMessageToDisplay }}
+    </p>
+  </ng-container>
+  <ng-container *ngIf="!resultSendMessage">
+    <form
+      [formGroup]="contactForm"
+      (ngSubmit)="submit()"
+      fxLayout="column"
+      fxLayoutAlign="center start"
+      fxLayoutGap="16px"
+      class="w-100"
     >
-      <input
-        type="text"
-        formControlName="name"
-        class="form-control"
-        placeholder="Nom"
-      />
-      <input
-        type="text"
-        formControlName="firstName"
-        class="form-control"
-        placeholder="Prénom"
-      />
-    </div>
-    <input
-      type="email"
-      formControlName="email"
-      class="form-control"
-      placeholder="Email"
-    />
-    <textarea
-      formControlName="message"
-      class="form-control"
-      rows="5"
-      placeholder="Message"
-    ></textarea>
-    <div fxFlexAlign="center">
-      <button
-        [disabled]="contactForm.invalid"
-        type="submit"
-        class="btn btn-success"
+      <div
+        class="w-100"
+        fxLayout="row"
+        fxLayoutAlign="space-between start"
+        fxLayoutGap="15px"
       >
-        Envoyer
-      </button>
-    </div>
-  </form>
+        <div fxLayout="column" fxLayoutAlign="start start" fxFlex="50%">
+          <input
+            type="text"
+            formControlName="name"
+            class="form-control"
+            placeholder="Nom"
+            (blur)="statusFormChange()"
+          />
+          <ng-container *ngIf="formFieldsErrors.name">
+            <small class="text-danger">{{ formFieldsErrors.name }}</small>
+          </ng-container>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="start start" fxFlex="50%">
+          <input
+            type="text"
+            formControlName="firstName"
+            class="form-control"
+            placeholder="Prénom"
+            (blur)="statusFormChange()"
+          />
+          <ng-container *ngIf="formFieldsErrors.firstName">
+            <small class="text-danger">{{ formFieldsErrors.firstName }}</small>
+          </ng-container>
+        </div>
+      </div>
+      <div class="w-100" fxLayout="column" fxLayoutAlign="start start">
+        <input
+          type="email"
+          formControlName="email"
+          class="form-control"
+          placeholder="Email"
+          (blur)="statusFormChange()"
+        />
+        <ng-container *ngIf="formFieldsErrors.email">
+          <small class="text-danger">{{ formFieldsErrors.email }}</small>
+        </ng-container>
+        
+      </div>
+      <div class="w-100" fxLayout="column" fxLayoutAlign="start start">
+        <textarea
+          formControlName="message"
+          class="form-control"
+          rows="5"
+          placeholder="Message"
+          (blur)="statusFormChange()"
+        ></textarea>
+        <ng-container *ngIf="formFieldsErrors.message">
+          <small class="text-danger">{{ formFieldsErrors.message }}</small>
+        </ng-container>
+      </div>
+      <div fxFlexAlign="center">
+        <button
+          [disabled]="contactForm.invalid"
+          type="submit"
+          class="btn btn-success"
+        >
+          Envoyer
+        </button>
+      </div>
+    </form>
+  </ng-container>
 </div>

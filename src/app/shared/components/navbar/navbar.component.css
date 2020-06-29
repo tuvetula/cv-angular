@@ -72,8 +72,8 @@ img {
     }
     #menuElement {
         top: var(--heightSizeTopbarMobile);
-        left: calc(0px - 100%);
-        width: 100%;
+        left: calc(0px - 90%);
+        width: 90%;
         border-bottom-right-radius: 0px;
     }
 }

@@ -1,5 +1,6 @@
 #bodyWithoutTopbar {
   min-height: calc(100vh - var(--heightSizeTopbar));
+  z-index: 1;
 }
 #contentRouterOutlet {
   margin:0;
@@ -15,7 +16,6 @@
     background-size: cover;
     background-position: top;
     padding: 24px;
-    z-index: -1;
   }
 }
 /* Version Lg */
