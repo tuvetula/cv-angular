@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { ContactService } from '../../services/Firebase/contact.service';
 import { Subscription } from 'rxjs';
+import { ContactFormModel } from '../../Models/contact-form.model';
 
 @Component({
   selector: 'app-contact-form',
@@ -14,7 +15,7 @@ export class ContactFormComponent implements OnInit,OnDestroy {
   public errorSendMessageToDisplay: string = null;
   private contactFormSubscription: Subscription;
 
-  public formFieldsErrors: {name:string,firstName:string,email:string,message:string} = {
+  public formFieldsErrors: ContactFormModel = {
     name: '',
     firstName: '',
     email: '',
@@ -68,14 +69,16 @@ export class ContactFormComponent implements OnInit,OnDestroy {
         this.resultSendMessage = true;
         this.resetForm();
       })
-      .finally(()=>{
-        setTimeout(() => {
-          this.resultSendMessage = false;
-        }, 4000);
-      })
       .catch(error => {
         this.resultSendMessage = false;
         this.errorSendMessageToDisplay = error;
+      })
+      .finally(()=>{
+        if(this.resultSendMessage){
+          setTimeout(() => {
+            this.resultSendMessage = false;
+          }, 4000);
+        }
       })
     }
   }
