@@ -50,8 +50,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
                 if (
                   this.menuElement.nativeElement.style.display === 'block' &&
                   element !== this.menuElement.nativeElement &&
-                  element !== this.burgerMenuButton.nativeElement &&
-                  !this.menuElement.nativeElement.contains(element)
+                  !this.menuElement.nativeElement.contains(element) &&
+                  element !== this.burgerMenuButton.nativeElement
                 ) {
                   this.displayMenuElement();
                 }
