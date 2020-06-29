@@ -65,6 +65,10 @@ img {
     .navMenuLink:hover {
         background-color: transparent;
     }
+    .navMenuLink:last-of-type.active{
+        border: 0 solid var(--yellowColor);
+        border-bottom-right-radius: 12px;
+    }
 }
 /* Version mobile */
 @media screen and (max-width:599px){
@@ -75,6 +79,5 @@ img {
         top: var(--heightSizeTopbarMobile);
         left: calc(0px - 90%);
         width: 90%;
-        border-bottom-right-radius: 0px;
     }
 }
