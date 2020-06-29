@@ -34,6 +34,7 @@ img {
 @media screen and (max-width:959px){
     #burgerMenuDiv {
         position: absolute;
+        z-index: 10;
         top: calc(var(--heightSizeTopbar) - 40px);
         height: 40px;
         width: 100%;

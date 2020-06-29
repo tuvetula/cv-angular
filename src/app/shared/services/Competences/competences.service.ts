@@ -10,11 +10,11 @@ export class CompetencesService {
     this.listCompetences = [
       {
         name: 'Html5',
-        note: 60
+        note: 80
       },
       {
         name: 'Css3',
-        note: 60
+        note: 80
       },
       {
         name: 'Javascript',
