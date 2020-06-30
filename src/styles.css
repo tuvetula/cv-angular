@@ -61,15 +61,13 @@ p {
 }
 @media screen and (max-width: 959px){
   article {
-      padding: 16px 0px;
+      padding: 16px 0;
   }
 }
-
 /* Liens ajouté dans string fourni par les services */
 .linkService , .linkService:hover {
   color: #63A8BF;
 }
-
 /* Carousel */
 .carousel-indicators {
   bottom: -60px;

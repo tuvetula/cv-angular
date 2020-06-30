@@ -11,6 +11,6 @@ export class HomePageComponent implements OnInit {
   constructor(private menuSelectedNameService: MenuSelectedNameService) {}
 
   ngOnInit(): void {
-    this.menuSelectedNameService.menuSelectedName.next(this.nameSection);
+    this.menuSelectedNameService.menuSelectedName.next(this.nameSection);    
   }
 }

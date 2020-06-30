@@ -1,42 +1,45 @@
 #bodyWithoutTopbar {
   min-height: calc(100vh - var(--heightSizeTopbar));
 }
-#contentRouterOutlet {
-  margin:0;
-}
 /* Version Xl */
-@media screen and (min-width:1280px){
+@media screen and (min-width: 1280px) {
   app-navbar {
     background-color: #427080;
     width: var(--widthAppNavbar);
   }
-  #contentRouterOutlet{
-    background: url(../assets/Pictures/Background/body/cubesBlancsXl.jpg); 
+  #content {
+    background: url(../assets/Pictures/Background/body/cubesBlancsXl.jpg);
     background-size: cover;
     background-position: top;
+  }
+  #routerOutlet {
     padding: 24px;
   }
 }
 /* Version Lg */
-@media screen and (min-width:960px) and (max-width: 1279px){
+@media screen and (min-width: 960px) and (max-width: 1279px) {
   app-navbar {
     background-color: #427080;
     width: var(--widthAppNavbar);
   }
-  #contentRouterOutlet {
-    background: url(../assets/Pictures/Background/body/cubesBlancsLg.jpg); 
+  #content {
+    background: url(../assets/Pictures/Background/body/cubesBlancsLg.jpg);
     background-size: cover;
     background-position: top;
+  }
+  #routerOutlet {
     padding: 24px;
   }
 }
 /* Version Tablette */
-@media screen and (min-width:600px) and (max-width: 959px) {
-  #contentRouterOutlet {
-    background: url(../assets/Pictures/Background/body/cubesBlancsTablette.jpg); 
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  #content {
+    background: url(../assets/Pictures/Background/body/cubesBlancsTablette.jpg);
     background-position: top;
     background-size: cover;
     background-attachment: fixed;
+  }
+  #routerOutlet {
     padding: 16px;
   }
 }
@@ -45,11 +48,13 @@
   #bodyWithoutTopbar {
     min-height: calc(100vh - var(--heightSizeTopbarMobile));
   }
-  #contentRouterOutlet {
+  #content {
     background: url(../assets/Pictures/Background/body/cubesBlancsMobile.jpg);
     background-position: top;
     background-size: cover;
-    background-attachment: fixed; 
+    background-attachment: fixed;
+  }
+  #routerOutlet {
     padding: 12px;
   }
 }

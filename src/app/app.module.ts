@@ -25,6 +25,7 @@ import { CarouselConfigComponent } from './shared/components/Caroussel/carousel-
 import { ScrollUpButtonComponent } from './shared/components/scroll-up-button/scroll-up-button.component';
 import { ContactFormComponent } from './shared/components/contact-form/contact-form.component';
 import { TopbarBackgroundComponent } from './shared/components/topbar-background/topbar-background.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { TopbarBackgroundComponent } from './shared/components/topbar-background
     CarouselConfigComponent,
     ScrollUpButtonComponent,
     ContactFormComponent,
-    TopbarBackgroundComponent
+    TopbarBackgroundComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

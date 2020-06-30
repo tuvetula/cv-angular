@@ -1,0 +1,28 @@
+<article fxLayout="row" fxLayoutAlign="space-between center">
+    <small class="m-0">&copy;2020 Romain Marcant</small>
+    <a [routerLink]="['/Contact']" routerLinkActive="active" >Contact</a>
+    <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="16px">
+     
+          <a href="{{ informations.linkedIn }}" target="_blank" title="LinkedIn">
+            <img
+            class="logo"
+              src="../../assets/Pictures/Logos/Contact/linkedin32.svg"
+              alt="Logo LinkedIn"
+            />
+          </a>
+          <a href="{{ informations.github }}" target="_blank" title="Github">
+            <img
+            class="logo"
+              src="../../assets/Pictures/Logos/Projets/github.svg"
+              alt="Logo Github"
+            />
+          </a>
+          <a href="{{ informations.cv }}" target="_blank" title="Cv">
+            <img
+            class="logo"
+              src="../../assets/Pictures/Logos/Projets/pdf.svg"
+              alt="Logo Cv"
+            />
+          </a>
+    </div>
+</article>

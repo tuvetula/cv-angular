@@ -1,10 +1,7 @@
-<!--
-    <a [ngClass]="classToApply" #scrollButton class="back-to-top" (click)="scrollToTop()">Back to Top</a>
--->
 <svg
   #scrollButton
   [ngClass]="classToApply"
-  class="back-to-top"
+  [class.changeBottomHeight]="changeBottomHeight"
   (click)="scrollToTop()"
   fill="#427080"
   viewBox="0 0 26 26"

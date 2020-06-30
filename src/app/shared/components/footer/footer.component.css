@@ -1,0 +1,27 @@
+article {
+    padding: 12px 24px;
+    border-top: var(--borderBottom) ;
+}
+img{
+    width: 20px;
+}
+.title{
+    font-family: molle-italic,Helvetica, sans-serif;
+}
+.logo{
+    width: 30px
+}
+a {
+    color: #231840;
+    text-decoration: underline;
+}
+@media screen and (max-width:959px){
+    article{
+        padding: 12px 16px;
+    }
+}
+@media screen and (max-width:599px){
+    article{
+        padding: 5px 12px;
+    }
+}

@@ -1,20 +1,19 @@
 /* Bouton pour remonter en haut de page */
-svg.back-to-top {
+svg {
+  cursor: pointer;
   visibility: hidden;
   position: fixed;
   z-index: 98;
-  right: 20px;
-  bottom: 20px;
+  right: 15px;
+  bottom: 15px;
   width: 48px;
   height: 48px;
 }
 /* Version Mobile */
 @media screen and (max-width:959px){
-  svg.back-to-top {
+  svg {
     width:40px;
     height: 40px;
-    right: 10px;
-    bottom: 10px;
   }
 }
 
@@ -22,6 +21,10 @@ svg.back-to-top {
 svg.fadeIn {
   animation: fadeIn 1s;
   animation-fill-mode: forwards;
+  transition: bottom 0.3s ease;
+}
+svg.fadeIn.changeBottomHeight {
+  bottom: 64px;
 }
 
 svg.fadeOut {
