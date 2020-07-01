@@ -1,30 +1,17 @@
 /* Bouton pour remonter en haut de page */
 svg {
+  position: fixed;
+  width: 40px;
+  bottom:12px;
+  height: 40px;
   cursor: pointer;
   visibility: hidden;
-  position: fixed;
   z-index: 98;
-  right: 15px;
-  bottom: 15px;
-  width: 48px;
-  height: 48px;
 }
-/* Version Mobile */
-@media screen and (max-width:959px){
-  svg {
-    width:40px;
-    height: 40px;
-  }
-}
-
 /* ANIMATIONS */
 svg.fadeIn {
   animation: fadeIn 1s;
   animation-fill-mode: forwards;
-  transition: bottom 0.3s ease;
-}
-svg.fadeIn.changeBottomHeight {
-  bottom: 64px;
 }
 
 svg.fadeOut {
@@ -52,4 +39,22 @@ svg.fadeOut {
     visibility: hidden;
     opacity: 0;
   }
+}
+/* Version Lg */
+@media screen and (min-width: 960px) {
+  svg {
+    right: 16px;
+  }
+}
+/* Version Tablette */
+@media screen and (min-width: 600px) and (max-width: 959px) {
+  svg {
+    right: 16px;
+  }
+}
+/* Version Mobile */
+@media screen and (max-width: 599px) {
+  svg {
+    right: 12px;
+  } 
 }

@@ -1,5 +1,4 @@
 article {
-    padding: 12px 24px;
     border-top: var(--borderBottom) ;
 }
 img{
@@ -15,13 +14,27 @@ a {
     color: #231840;
     text-decoration: underline;
 }
-@media screen and (max-width:959px){
+/* Version Lg */
+@media screen and (min-width:960px){
     article{
+        height: 54px;
+        padding: 12px 24px;
+    }
+}
+/* Version Tablette */
+@media screen and (min-width:600px) and (max-width:959px){
+    article{
+        height: 54px;
         padding: 12px 16px;
     }
 }
+/* Version Mobile */
 @media screen and (max-width:599px){
     article{
-        padding: 5px 12px;
+        height:86px;
+        padding: 12px;
+    }
+    small{
+        margin-top: 12px;
     }
 }

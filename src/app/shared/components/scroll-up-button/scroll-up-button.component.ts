@@ -5,6 +5,8 @@ import {
   ElementRef,
   HostListener,
 } from '@angular/core';
+import { ScreenSizeService } from '../../services/utilities/screen-size.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-scroll-up-button',
@@ -12,39 +14,65 @@ import {
   styleUrls: ['./scroll-up-button.component.css'],
 })
 export class ScrollUpButtonComponent implements OnInit {
+  private amountScrolled: number = 300;
+  private footerHeight: number;
+  private padding: number;
+  public buttonBottom: string;
+
+  private screenSize: number;
+  private screenSizeSubscription: Subscription;
   public classToApply: {
     fadeIn: boolean;
     fadeOut: boolean;
   };
-  public changeBottomHeight: boolean = false;
-  private amountScrolled: number = 300;
   @ViewChild('scrollButton') scrollButton: ElementRef;
 
-  constructor() {}
+  constructor(private screenSizeService: ScreenSizeService) {}
 
   ngOnInit(): void {}
   @HostListener('window:scroll') onWindowScroll(e: any) {
     if (window.scrollY > this.amountScrolled) {
+      //On subscribe au screenSize si ce n'est pas deja fait
+      if (!this.screenSizeSubscription || this.screenSizeSubscription.closed) {
+        this.screenSizeSubscription = this.screenSizeService.windowInnerWidth.subscribe(
+          (value) => {
+            this.screenSize = value;
+            if (value < 600) {
+              this.footerHeight = 86;
+              this.padding = 12;
+            } else if (value >= 600 && value < 960) {
+              this.footerHeight = 54;
+              this.padding = 16;
+            } else {
+              this.footerHeight = 54;
+              this.padding = 24;
+            }
+          }
+        );
+      }
+      //On applique classe fadeIn
       if (
         !this.classToApply ||
         (!this.classToApply.fadeIn && this.classToApply.fadeOut)
       ) {
         this.applyClass(true, false);
       }
+      //On calcule la valeur de bottom pour le scrollButton
+      const bodyHeight = document.body.scrollHeight; //2500
+      const windowHeight = window.innerHeight; //580
+      const scrollY = Math.ceil(window.scrollY); //1900
       if (
-        window.innerHeight + Math.ceil(window.scrollY) >=
-          document.body.scrollHeight - 35 &&
-        !this.changeBottomHeight
+        windowHeight + scrollY >= bodyHeight - this.footerHeight - 12
       ) {
-        this.changeBottomHeight = true;
-      } else if (
-        this.changeBottomHeight &&
-        window.innerHeight + Math.ceil(window.scrollY) <
-          document.body.scrollHeight - 35
-      ) {
-        this.changeBottomHeight = false;
+        this.buttonBottom = (this.footerHeight + this.padding) - (bodyHeight - (windowHeight + scrollY)) + 'px';
+      } else {
+        this.buttonBottom = '12px';
       }
     } else if (window.scrollY < this.amountScrolled) {
+      //On unsubscribe au screenSize
+      if (this.screenSizeSubscription && !this.screenSizeSubscription.closed) {
+        this.screenSizeSubscription.unsubscribe();
+      }
       if (
         this.classToApply &&
         this.classToApply.fadeIn &&

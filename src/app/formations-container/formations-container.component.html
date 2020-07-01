@@ -38,15 +38,14 @@
         <p *ngIf="item.diplom">{{ item.diplom }}</p>
         <p *ngIf="item.description">{{ item.description }}</p>
       </div>
-      <ng-container *ngIf="item.diplomImgUrl">
+      <div *ngIf="item.diplomImgUrl" fxFlexAlign="center" fxFlex.sm="30%" fxLayoutAlign.sm="center center">
         <img
-          fxFlexAlign="center" fxFlexOffset.lt-sm="16px"
           class="diplom"
           [src]="item.diplomImgUrlThumbnail"
           id="diplomThumbnail"
           (click)="showDiplomModal(item.diplomImgUrl)"
         />
-      </ng-container>
+      </div>
     </section>
   </article>
 </ng-container>

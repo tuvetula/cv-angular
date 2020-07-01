@@ -1,8 +1,7 @@
-<article fxLayout="row" fxLayoutAlign="space-between center">
-    <small class="m-0">&copy;2020 Romain Marcant</small>
+<article fxLayout="row wrap" fxLayoutAlign="space-between center">
+    <small class="text-center" fxFlex.lt-sm="100%" fxFlexOrder.lt-sm="1">&copy;2020 Romain Marcant</small>
     <a [routerLink]="['/Contact']" routerLinkActive="active" >Contact</a>
-    <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="16px">
-     
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
           <a href="{{ informations.linkedIn }}" target="_blank" title="LinkedIn">
             <img
             class="logo"
