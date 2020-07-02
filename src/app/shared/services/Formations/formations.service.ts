@@ -31,7 +31,7 @@ export class FormationsService {
         description: 'Formation en ligne'
       },
       {
-        name: "Concepteur développeur d'applications",
+        name: "Concepteur Développeur d'Applications",
         company: 'Adrar',
         city: 'Ramonville-Saint-Agne',
         country: 'France',
