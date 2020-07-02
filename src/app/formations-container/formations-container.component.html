@@ -38,7 +38,7 @@
         <p *ngIf="item.diplom">{{ item.diplom }}</p>
         <p *ngIf="item.description">{{ item.description }}</p>
       </div>
-      <div *ngIf="item.diplomImgUrl" fxFlexAlign="center" fxFlex.sm="30%" fxLayoutAlign.sm="center center">
+      <div *ngIf="item.diplomImgUrl" fxFlexAlign="center" fxFlex.sm="110px" fxFlex.gt-md="86px" fxLayoutAlign.gt-xs="start center">
         <img
           class="diplom"
           [src]="item.diplomImgUrlThumbnail"

@@ -36,16 +36,18 @@ export class ScrollUpButtonComponent implements OnInit {
       if (!this.screenSizeSubscription || this.screenSizeSubscription.closed) {
         this.screenSizeSubscription = this.screenSizeService.windowInnerWidth.subscribe(
           (value) => {
-            this.screenSize = value;
-            if (value < 600) {
-              this.footerHeight = 86;
-              this.padding = 12;
-            } else if (value >= 600 && value < 960) {
-              this.footerHeight = 54;
-              this.padding = 16;
-            } else {
-              this.footerHeight = 54;
-              this.padding = 24;
+            if (value !== this.screenSize) {
+              this.screenSize = value;
+              if (value < 600) {
+                this.footerHeight = 86;
+                this.padding = 12;
+              } else if (value >= 600 && value < 960) {
+                this.footerHeight = 54;
+                this.padding = 16;
+              } else {
+                this.footerHeight = 54;
+                this.padding = 24;
+              }
             }
           }
         );
@@ -58,13 +60,15 @@ export class ScrollUpButtonComponent implements OnInit {
         this.applyClass(true, false);
       }
       //On calcule la valeur de bottom pour le scrollButton
-      const bodyHeight = document.body.scrollHeight; //2500
+      const bodyHeight: number = document.body.scrollHeight; //2500
       const windowHeight = window.innerHeight; //580
       const scrollY = Math.ceil(window.scrollY); //1900
-      if (
-        windowHeight + scrollY >= bodyHeight - this.footerHeight - 12
-      ) {
-        this.buttonBottom = (this.footerHeight + this.padding) - (bodyHeight - (windowHeight + scrollY)) + 'px';
+      if (windowHeight + scrollY >= bodyHeight - this.footerHeight - (this.padding - 12)) {
+        this.buttonBottom =
+          this.footerHeight +
+          this.padding -
+          (bodyHeight - (windowHeight + scrollY)) +
+          'px';
       } else {
         this.buttonBottom = '12px';
       }

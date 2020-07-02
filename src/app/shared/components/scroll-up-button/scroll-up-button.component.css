@@ -3,6 +3,7 @@ svg {
   position: fixed;
   width: 40px;
   bottom:12px;
+  right: 16px;
   height: 40px;
   cursor: pointer;
   visibility: hidden;
@@ -43,7 +44,7 @@ svg.fadeOut {
 /* Version Lg */
 @media screen and (min-width: 960px) {
   svg {
-    right: 16px;
+    right: 24px;
   }
 }
 /* Version Tablette */
