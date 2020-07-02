@@ -55,7 +55,6 @@
     background-attachment: fixed;
   }
   #routerOutlet {
-    /* min-height: calc(100% - 86px); */
     padding: 12px;
   }
 }
