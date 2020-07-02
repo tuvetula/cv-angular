@@ -28,6 +28,9 @@
   }
 }
 /* Animation DIV */
+.competencesContainer{
+  height: 100%;
+}
 .competenceName,.competenceLevel {
   padding: 0 10px;
   width: 50%;
