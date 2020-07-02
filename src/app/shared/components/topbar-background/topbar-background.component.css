@@ -77,14 +77,14 @@ h1 , h3{
 }
 /* Version Xl */
 #topBar {
-    background: url('../../../../assets/Pictures/Background/topbar/networkXl.jpg');
+    background: url('../../../../assets/Pictures/Background/topbar/topbar_xl.jpg');
     background-position: center;
     background-size: cover;
 }
 /* Version Lg */
-@media screen and (min-width:960px) and (max-width:1279px){
+@media screen and (min-width:960px) and (max-width:1280px){
     #topBar {
-        background: url('../../../../assets/Pictures/Background/topbar/networkLg.jpg');
+        background: url('../../../../assets/Pictures/Background/topbar/topbar_lg.jpg');
         background-position: center;
         background-size: cover;
     }
@@ -93,7 +93,7 @@ h1 , h3{
 @media screen and (min-width:600px) and (max-width:959px){
     #topBar {
         padding-bottom: 40px;
-        background: url('../../../../assets/Pictures/Background/topbar/networkTablette.jpg');
+        background: url('../../../../assets/Pictures/Background/topbar/topbar_tablette.jpg');
         background-position: bottom;
         background-size: cover;
 
@@ -103,7 +103,7 @@ h1 , h3{
 @media screen and (max-width:599px) {
     #topBar {
         padding-bottom: 40px;
-        background: url('../../../../assets/Pictures/Background/topbar/networkMobile.jpg');
+        background: url('../../../../assets/Pictures/Background/topbar/topbar_mobile.jpg');
         background-position: bottom;
         background-size: cover;
         height: var(--heightSizeTopbarMobile);
