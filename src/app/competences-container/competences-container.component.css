@@ -28,9 +28,6 @@
   }
 }
 /* Animation DIV */
-.competencesContainer,.competences{
-  height:100%;
-}
 .competenceName,.competenceLevel {
   padding: 0 10px;
   width: 50%;
@@ -63,8 +60,6 @@
   width: 60px;
 }
 .LogosRight,.LogosLeft {
-  position: relative;
-  height: 100%;
   visibility: hidden;
   animation: fallTop 1.5s ease 2.5s 1 normal forwards;
 }

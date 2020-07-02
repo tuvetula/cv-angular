@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-body {
+html,body{
   height: 100%;
+}
+body {
   --nameColor: #213840;
   --companyColor: #427080;
   --dateColor: #63a8bf;
