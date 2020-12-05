@@ -3,15 +3,13 @@
     <img class="logo" src="../../assets/Pictures/Logos/Competences/html5.svg" alt="Logo html" id="HtmlLogo">
     <img class="logo" src="../../assets/Pictures/Logos/Competences/css3.svg" alt="Logo css" id="CssLogo">
     <img class="logo" src="../../assets/Pictures/Logos/Competences/bootstrap.svg" alt="Logo bootstrap" id="BootstrapLogo">
-    <img class="logo" src="../../assets/Pictures/Logos/Competences/vsCode.svg" alt="Logo vscode" id="VsCodeLogo">
+    <img class="logo" src="../../assets/Pictures/Logos/Competences/vueJs.svg" alt="Logo vscode" id="VsCodeLogo">
   </div>
   <div class="competences" fxLayout="column" fxLayoutAlign="space-between" fxLayoutGap="16px" fxFlexAlign="stretch" fxFlex.gt-xs="30%">
     <ng-container *ngFor="let item of listCompetences">
-        <div class="competenceName" fxLayout="row" fxLayoutAlign="center center">
-          <span class="font-weight-bold">{{ item.groupName }}</span>
-        </div>
         <div class="competenceName" fxLayout="column" fxLayoutAlign="center center">
-            <p *ngFor="let competence of item.list">{{ competence }}</p>
+          <span class="font-weight-bold mb-2">{{ item.groupName }}</span>
+          <p *ngFor="let competence of item.list">{{ competence }}</p>
         </div>
     </ng-container>
   </div>

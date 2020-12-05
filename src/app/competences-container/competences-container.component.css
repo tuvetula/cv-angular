@@ -17,9 +17,6 @@
         opacity: 1;
      }
 }
-.competenceLevel {
-    animation: 1s linear entryCl;
-}
 @keyframes entryCl {
     from {
         opacity: 0;
