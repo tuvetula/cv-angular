@@ -10,7 +10,7 @@ import { MenuSelectedNameService } from '../shared/services/Observables/menu-sel
   providers: [CompetencesService]
 })
 export class CompetencesContainerComponent implements OnInit {
-  private nameSection: string = "Compétences";
+  private nameSection = 'Compétences';
   public listCompetences: CompetenceModel[];
   constructor(
     private competencesService: CompetencesService,
@@ -21,24 +21,15 @@ export class CompetencesContainerComponent implements OnInit {
     this.menuSelectedNameService.menuSelectedName.next(this.nameSection);
     this.listCompetences = this.competencesService.listCompetences.sort(
       (a,b) => {
-        if(a.note < b.note){
-          return 1;
-        } else if (a.note > b.note){
+        if (a.groupName < b.groupName){
           return -1;
+        } else if (a.groupName > b.groupName){
+          return 1;
         } else {
           return 0;
         }
       }
-    ).sort((a,b) => {
-      if(a.note === b.note){
-        if(a.name > b.name){
-          return 1;
-        } else if (a.name < b.name){
-          return -1;
-        } else {
-          return 0;
-        }
-      }
-    });
+    );
+    this.listCompetences.forEach((element: CompetenceModel) => element.list.sort());
   }
 }

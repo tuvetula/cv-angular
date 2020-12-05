@@ -5,41 +5,27 @@ import { CompetenceModel } from '../../Models/list-competences.model';
   providedIn: 'root'
 })
 export class CompetencesService {
-  public listCompetences: CompetenceModel[]
-  constructor() { 
+  public listCompetences: CompetenceModel[];
+  constructor() {
     this.listCompetences = [
       {
-        name: 'Html5',
-        note: 80
+        groupName: 'Frameworks',
+        list: [
+          'Bootstrap',
+          'Laravel',
+          'Angular',
+          'VueJs'
+        ]
       },
       {
-        name: 'Css3',
-        note: 80
-      },
-      {
-        name: 'Javascript',
-        note: 80
-      },
-      {
-        name: 'Php',
-        note: 60,
-      },
-      {
-        name: 'Sql',
-        note: 40
-      },
-      {
-        name: 'Angular',
-        note: 80
-      },
-      {
-        name: 'Laravel',
-        note: 50
-      },
-      {
-        name: 'Bootstrap',
-        note: 60
+        groupName: 'Languages',
+        list: [
+          'Html5',
+          'Css3',
+          'Javascript',
+          'Php'
+          ]
       }
-    ]
+    ];
   }
 }

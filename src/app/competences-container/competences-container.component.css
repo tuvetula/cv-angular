@@ -1,39 +1,9 @@
-/* Point colorés */
-.circle {
-  width: 20px;
-  height: 20px;
-  border: solid 1px #213840;
-  border-radius: 50%;
-  background-color: transparent;
-}
-.circleLeft,.circleRight{
-  width: 50%;
-  height: 100%;
-}
-.circleLeft {
-  border-top-left-radius: 9px;
-  border-bottom-left-radius: 9px;
-}
-.circleRight {
-  border-bottom-right-radius: 9px;
-  border-top-right-radius: 9px;
-}
-.circleColored {
-  animation: point 1.5s ease-in-out 1s 1 normal forwards;
-}
-@keyframes point {
-  from {
-  }to {
-    background-color: #63A8BF;
-  }
-}
 /* Animation DIV */
 .competencesContainer{
   height: 100%;
 }
-.competenceName,.competenceLevel {
+.competenceName {
   padding: 0 10px;
-  width: 50%;
 }
 .competenceName {
   font-size: 1.3em;

@@ -7,33 +7,12 @@
   </div>
   <div class="competences" fxLayout="column" fxLayoutAlign="space-between" fxLayoutGap="16px" fxFlexAlign="stretch" fxFlex.gt-xs="30%">
     <ng-container *ngFor="let item of listCompetences">
-      <div class="competenceRow" fxLayout="row">
-        <div class="competenceName" fxLayout="row" fxLayoutAlign="end center">
-          <span>{{ item.name }}</span>
+        <div class="competenceName" fxLayout="row" fxLayoutAlign="center center">
+          <span class="font-weight-bold">{{ item.groupName }}</span>
         </div>
-        <div class="competenceLevel" fxLayout="row" fxLayoutAlign="start center">
-          <div class="circle" fxLayout="row nowrap" fxLayoutAlign="center center">
-            <div class="circleLeft" [class.circleColored]="item.note > 0"></div>
-            <div class="circleRight" [class.circleColored]="item.note > 10"></div>
-          </div>
-          <div class="circle" fxLayout="row nowrap" fxLayoutAlign="start center">
-            <div class="circleLeft" [class.circleColored]="item.note > 20"></div>
-            <div class="circleRight" [class.circleColored]="item.note > 30"></div>
-          </div>
-          <div class="circle" fxLayout="row nowrap" fxLayoutAlign="start center">
-            <div class="circleLeft" [class.circleColored]="item.note > 40"></div>
-            <div class="circleRight" [class.circleColored]="item.note > 50"></div>
-          </div>
-          <div class="circle" fxLayout="row nowrap" fxLayoutAlign="start center">
-            <div class="circleLeft" [class.circleColored]="item.note > 60"></div>
-            <div class="circleRight" [class.circleColored]="item.note > 70"></div>
-          </div>
-          <div class="circle" fxLayout="row" fxLayoutAlign="start center">
-            <div class="circleLeft" [class.circleColored]="item.note > 80"></div>
-            <div class="circleRight" [class.circleColored]="item.note > 90"></div>
-          </div>
+        <div class="competenceName" fxLayout="column" fxLayoutAlign="center center">
+            <p *ngFor="let competence of item.list">{{ competence }}</p>
         </div>
-      </div>
     </ng-container>
   </div>
   <div class="LogosRight" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="24px" fxFlex="35%" fxFlexAlign="stretch">

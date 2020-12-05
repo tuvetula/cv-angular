@@ -1,4 +1,4 @@
 export interface CompetenceModel {
-  name: string;
-  note: number;
+  groupName: string;
+  list: string[];
 }
