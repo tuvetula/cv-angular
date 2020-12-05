@@ -1,5 +1,6 @@
 #profilPicture {
     border: solid 1px #213840;
-    box-shadow: 0 0 5px;
+    box-shadow: 0 0 10px;
     border-radius: 50%;
+    max-width: 150px;
 }

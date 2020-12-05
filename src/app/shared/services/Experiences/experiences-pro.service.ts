@@ -15,7 +15,8 @@ export class ExperiencesProService {
         startDate: new Date(2020, 9),
         endDate: new Date(2021, 3),
         description: [
-          'Développement des évolutions et maintenance sur le CRM interne (Laravel, Javascript, html/css)' ]
+          'Développement des évolutions et maintenance sur le CRM interne (Laravel, Javascript, html/css).'
+        ]
       },
       {
         name: 'Stage concepteur développeur Web',
