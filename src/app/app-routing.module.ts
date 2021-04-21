@@ -11,14 +11,14 @@ import { ContactContainerComponent } from './contact-container/contact-container
 
 
 const routes: Routes = [
-  { path: "Formations" , component: FormationsContainerComponent},
-  { path: "Experiences-professionnelles" , component: ExperiencesContainerComponent},
-  { path: "Competences" , component: CompetencesContainerComponent},
-  { path: "Projets" , component: ProjetsContainerComponent},
-  { path: "Loisirs" , component: LoisirsContainerComponent},
-  { path: "Contact" , component: ContactContainerComponent},
-  { path: "" , component: HomePageComponent, pathMatch:"full"},
-  { path: "**" , component: Page404NotFoundComponent}
+  { path: 'Formations' , component: FormationsContainerComponent},
+  { path: 'Experiences-professionnelles' , component: ExperiencesContainerComponent},
+  { path: 'Competences' , component: CompetencesContainerComponent},
+  { path: 'Projets' , component: ProjetsContainerComponent},
+  { path: 'Loisirs' , component: LoisirsContainerComponent},
+  { path: 'Contact' , component: ContactContainerComponent},
+  { path: '' , component: HomePageComponent, pathMatch: 'full'},
+  { path: '**' , component: Page404NotFoundComponent}
 ];
 
 @NgModule({
