@@ -13,9 +13,10 @@ export class ExperiencesProService {
         city: 'Castanet Tolosan',
         country: 'France',
         startDate: new Date(2020, 9),
-        endDate: new Date(2021, 3),
+        endDate: new Date(2021, 9),
         description: [
-          'Développement des évolutions et maintenance sur le CRM interne (Laravel, Javascript, html/css).'
+          'Développement des évolutions et bugs sur le CRM interne (Laravel, Javascript, html/css).',
+          'Développement d\'un outil d\'observation des merge-request en cours et de l\'état des serveurs (vueJs).'
         ]
       },
       {
@@ -34,18 +35,18 @@ export class ExperiencesProService {
         company: 'Verifone',
         city: 'Midi-pyrénées',
         country: 'France',
-        startDate: new Date(2011,0),
-        endDate: new Date(2018,10),
-        description: ['Maintenance sur site de Terminaux de Paiements Electroniques.', 'Déploiement et mise en réseau des solutions de paiement + formation utilisateurs.','Paramétrage et formation clients sur logiciel Turbo (transfert de flux bancaires)']
+        startDate: new Date(2011, 0),
+        endDate: new Date(2018, 10),
+        description: ['Maintenance sur site de Terminaux de Paiements Electroniques.', 'Déploiement et mise en réseau des solutions de paiement + formation utilisateurs.', 'Paramétrage et formation clients sur logiciel Turbo (transfert de flux bancaires)']
       },
       {
         name: 'Technicien maintenance et réseau informatique',
         company: 'Chausson matériaux',
         city: 'Fenouillet',
         country: 'France',
-        startDate: new Date(2008,4),
-        endDate: new Date(2009,5),
-        description: ['Assistance aux utilisateurs par téléphone.','Réparation ordinateurs.','Assistance à la gestion du parc.']
+        startDate: new Date(2008, 4),
+        endDate: new Date(2009, 5),
+        description: ['Assistance aux utilisateurs par téléphone.', 'Réparation ordinateurs.', 'Assistance à la gestion du parc.']
       }
     ];
   }
