@@ -16,6 +16,7 @@ export class ExperiencesProService {
         endDate: new Date(2021, 9),
         description: [
           'Développement des évolutions et bugs sur le CRM interne (Laravel, Javascript, html/css).',
+          'Refonte du CRM interne en api (laravel).',
           'Développement d\'un outil d\'observation des merge-request en cours et de l\'état des serveurs (vueJs).'
         ]
       },
