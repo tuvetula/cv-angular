@@ -62,7 +62,7 @@
         <ng-container *ngIf="formFieldsErrors.email">
           <small class="text-danger">{{ formFieldsErrors.email }}</small>
         </ng-container>
-        
+
       </div>
       <div class="w-100" fxLayout="column" fxLayoutAlign="start start">
         <textarea
@@ -75,6 +75,9 @@
         <ng-container *ngIf="formFieldsErrors.message">
           <small class="text-danger">{{ formFieldsErrors.message }}</small>
         </ng-container>
+      </div>
+      <div class="w-100" fxLayout="column" fxLayoutAlign="center center">
+        <re-captcha formControlName="recaptchaReactive"></re-captcha>
       </div>
       <div fxFlexAlign="center">
         <button

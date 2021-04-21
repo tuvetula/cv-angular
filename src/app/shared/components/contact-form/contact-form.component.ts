@@ -9,7 +9,7 @@ import { ContactFormModel } from '../../Models/contact-form.model';
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.css']
 })
-export class ContactFormComponent implements OnInit,OnDestroy {
+export class ContactFormComponent implements OnInit, OnDestroy {
   public contactForm: FormGroup;
   public resultSendMessage: boolean;
   public errorSendMessageToDisplay: string = null;
@@ -20,47 +20,51 @@ export class ContactFormComponent implements OnInit,OnDestroy {
     firstName: '',
     email: '',
     message: ''
-  }
+  };
   public errorsMessage: {} = {
     name: {
-      required: "Ce champ est requis.",
-      minlength: "Ce champ doit comporter au moins 2 caractères."  
+      required: 'Ce champ est requis.',
+      minlength: 'Ce champ doit comporter au moins 2 caractères.'
     },
     firstName: {
-      required: "Ce champ est requis.",
-      minlength: "Ce champ doit comporter au moins 2 caractères." 
+      required: 'Ce champ est requis.',
+      minlength: 'Ce champ doit comporter au moins 2 caractères.'
     },
     email: {
-      required: "Ce champ est requis.",
-      email: "Veuillez renseigner une adresse mail valide."
+      required: 'Ce champ est requis.',
+      email: 'Veuillez renseigner une adresse mail valide.'
     },
     message: {
-      required: "Ce champ est requis.",
-      minlength: "Ce champ doit comporter au moins 10 caractères." 
+      required: 'Ce champ est requis.',
+      minlength: 'Ce champ doit comporter au moins 10 caractères.'
     }
-  }
+  };
+  private siteKey: string;
 
   constructor(
     private contactService: ContactService,
     private fb: FormBuilder
-  ) { }
+  ) {
+    this.siteKey = '6Lfy4bMaAAAAAO8ZZZ2UQ87p6McnKBb_oR5N8fgl';
+  }
 
   ngOnInit(): void {
     this.contactForm = this.fb.group({
-      name: ['',[Validators.required , Validators.minLength(2)]],
-      firstName: ['',[Validators.required , Validators.minLength(2)]],
-      email: ['',[Validators.required,Validators.email]],
-      message: ['',[Validators.required , Validators.minLength(10)]]
+      name: ['', [Validators.required , Validators.minLength(2)]],
+      firstName: ['', [Validators.required , Validators.minLength(2)]],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', [Validators.required , Validators.minLength(10)]],
+      recaptchaReactive: [null, Validators.required]
     });
     this.contactFormSubscription = this.contactForm.statusChanges.subscribe(
       () => this.statusFormChange()
-    )
+    );
   }
   public submit(): void {
     this.errorSendMessageToDisplay = null;
     this.resultSendMessage = false;
-    //On supprime les blancs en début et fin de chaque champ
-    for (let item in this.contactForm.value){
+    // On supprime les blancs en début et fin de chaque champ
+    for (const item in this.contactForm.value){
       this.contactForm.value[item] = this.contactForm.value[item].trim();
     }
     if(this.contactForm.valid){
@@ -83,9 +87,9 @@ export class ContactFormComponent implements OnInit,OnDestroy {
     }
   }
   public statusFormChange(): void {
-    if(!this.contactForm){
+    if (!this.contactForm){
       return;
-    }    
+    }
     for (const field in this.formFieldsErrors){
       this.formFieldsErrors[field] = '';
       const control = this.contactForm.get(field);

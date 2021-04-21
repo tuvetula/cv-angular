@@ -9,7 +9,7 @@ import { InformationsService } from '../shared/services/Contact/informations.ser
   styleUrls: ['./contact-container.component.css']
 })
 export class ContactContainerComponent implements OnInit {
-  private nameSection: string = "Contact";
+  private nameSection = 'Contact';
   public informations: InformationsModel;
 
   constructor(
@@ -19,6 +19,6 @@ export class ContactContainerComponent implements OnInit {
 
   ngOnInit(): void {
     this.menuSelectedNameService.menuSelectedName.next(this.nameSection);
-    this.informations = this.informationsService.listInformations; 
+    this.informations = this.informationsService.listInformations;
   }
 }
