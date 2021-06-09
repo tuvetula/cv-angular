@@ -13,6 +13,7 @@
             else elseTemplate
           "
         >
+        <p>
           De
           {{
             item.startDate.toLocaleDateString("fr-FR", {
@@ -21,12 +22,18 @@
             }) | titlecase
           }}
           à
-          {{
-            item.endDate.toLocaleDateString("fr-FR", {
-              month: "long",
-              year: "numeric"
-            }) | titlecase
-          }}
+          <ng-container *ngIf="item.endDate.getTime() !== todayDate.getTime(); else today">
+            {{
+              item.endDate.toLocaleDateString("fr-FR", {
+                month: "long",
+                year: "numeric"
+              }) | titlecase
+            }}
+          </ng-container>
+          <ng-template #today>
+            Aujourd'hui
+          </ng-template>
+        </p>
         </ng-container>
         <ng-template #elseTemplate>
           {{

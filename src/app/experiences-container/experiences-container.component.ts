@@ -12,6 +12,7 @@ import { MenuSelectedNameService } from '../shared/services/Observables/menu-sel
 export class ExperiencesContainerComponent implements OnInit {
   public listExperiences: ExperienceModel[];
   private nameSection: string = 'Expériences professionnelles';
+  public todayDate: Date = new Date();
 
   constructor(
     private menuSelectedNameService: MenuSelectedNameService,
