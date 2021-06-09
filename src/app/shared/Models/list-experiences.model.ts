@@ -4,6 +4,6 @@ export interface ExperienceModel {
   city: string;
   country: string;
   startDate: Date;
-  endDate: Date;
+  endDate: Date|string;
   description: string[];
 }

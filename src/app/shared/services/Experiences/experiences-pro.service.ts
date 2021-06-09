@@ -13,7 +13,7 @@ export class ExperiencesProService {
         city: 'Castanet Tolosan',
         country: 'France',
         startDate: new Date(2020, 9),
-        endDate: new Date(2021, 9),
+        endDate: 'Aujourd\'hui',
         description: [
           'Développement des évolutions et bugs sur le CRM interne (Laravel, Javascript, html/css).',
           'Refonte du CRM interne en api (laravel).',
